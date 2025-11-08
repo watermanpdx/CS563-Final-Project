@@ -21,7 +21,7 @@ One challenge that I encountered was that I have a personal GitHub account that 
 
 ### Initial Setup
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [d3b94de](https://github.com/watermanpdx/CS563-Final-Project/commit/d3b94de)
 
 The initial content "skeleton" was set up including basic links, html structure, and initial inclusion/implementation of Bootstrap for the Nav bar.
 
