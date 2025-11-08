@@ -6,6 +6,10 @@ The following is the final project for Portland State University, CS563 Intro To
 
 Details of the website implemetation and design history can be found within the docs in this repository.
 
+## Access
+
+Web-page can be accessed via: [https://watermanpdx.github.io/CS563-Final-Project/](https://watermanpdx.github.io/CS563-Final-Project/)
+
 ## Journal
 
 History of the development of this website, including major changes and design decisions can be found in the [journal](./journal.md) document in this repository.
