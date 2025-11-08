@@ -6,8 +6,383 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waterman - PDX</title>
+    <script defer src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <h1>Hello World!</h1>
+    <header>
+      <!-- Bootstrap navbar reference:  https://getbootstrap.com/docs/5.3/components/navbar/#nav -->
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tayte Waterman</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#about"
+                >About</a
+              >
+              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="#contact">Contacts</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h1>About</h1>
+        <p>
+          My name is <strong>Tayte Waterman</strong>, and I’ve always enjoyed
+          exploring how things work—whether that means tinkering with
+          electronics, experimenting with code, or diving into math and physics
+          out of curiosity. I like building small software and hardware projects
+          that connect the digital and physical worlds, and allow learning
+          through doing. Outside of that, I enjoy cooking, reading sci-fi,
+          gaming, traveling, and most of all spending time with my
+          family—especially my energetic three-year-old son, who keeps life fun
+          and full of discovery and always keeps me on my toes.
+        </p>
+        <p>
+          Professionally, I bring over a decade of experience in the
+          <strong>automotive industry</strong>, spanning ECU and
+          vehicle-controls development, embedded systems, and software
+          architecture. I currently work as a
+          <strong>Software Architect at Daimler Truck AG</strong>, helping
+          define the next-generation
+          <strong>Software Oriented Architecture</strong> for commercial
+          vehicles. I’m passionate about mentoring peers, championing best
+          practices, and bridging software and mechanical systems to create
+          efficient, innovative, and impactful solutions.
+        </p>
+        <p>
+          I value <strong>continual learning and personal growth</strong>, and
+          that mindset has led me to pursue a
+          <strong
+            >Master’s in Computer Science at Portland State University </strong
+          >. Through this program, I’m deepening my understanding of modern
+          software systems, architecture, and the evolving technologies shaping
+          the future of mobility and intelligent systems.
+        </p>
+      </section>
+      <section id="experience">
+        <section class="education">
+          <h2>Education</h2>
+          <ul>
+            <li>
+              <div class="name">Oregon Institute of Technology</div>
+              <div class="location">Klamath Falls, OR, USA</div>
+              <a href="https://www.oit.edu/">oit.edu</a>
+              <div class="major">B.S. Mechanical Engineering</div>
+              <div class="minor">Applied Mathematics</div>
+              <div class="status">Graduated</div>
+              <div class="duration">
+                <div class="from">2005</div>
+                <div class="to">2009</div>
+              </div>
+            </li>
+            <li>
+              <div class="name">Portland State University</div>
+              <div class="location">Portland, OR, USA</div>
+              <a href="https://www.pdx.edu/">pdx.edu</a>
+              <div class="major">Post-Bac Computer Sccience</div>
+              <div class="status">Completed (Non-Degree)</div>
+              <div class="duration">
+                <div class="from">2020</div>
+                <div class="to">2022</div>
+              </div>
+            </li>
+            <li>
+              <div class="name">Portland State University</div>
+              <div class="location">Portland, OR, USA</div>
+              <a href="https://www.pdx.edu/">pdx.edu</a>
+              <div class="major">M.S. Computer Sccience</div>
+              <div class="status">In-Progress</div>
+              <div class="duration">
+                <div class="from">2022</div>
+                <div class="to">Current</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="accreditations">
+          <h2>Accreditations</h2>
+          <ul>
+            <li>
+              <div class="name">
+                Professional Engineer, Mechanical Engineering
+              </div>
+              <div class="reference-no">82548PE</div>
+              <div class="organization">OSBEELS</div>
+              <a href="https://www.oregon.gov/osbeels/">oregon.gov/osbeels/</a>
+              <div class="status">Active</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="work-experience">
+          <h2>Work Experience</h2>
+          <ul>
+            <li>
+              <div class="name">Gigaphoton USA Inc</div>
+              <div class="location">Beaverton, OR, USA</div>
+              <a href="https://www.gigaphoton.com/">gigaphoton.com</a>
+              <ul>
+                <li>
+                  <div class="title">Field Service Engineer</div>
+                  <div class="from">2010</div>
+                  <div class="to">2011</div>
+                  <p>
+                    In this role I supported the installation, maintenance, and
+                    repair of advanced laser systems used in semiconductor
+                    manufacturing. I traveled to customer sites to perform
+                    diagnostics, troubleshoot issues, and ensure optimal
+                    performance of the equipment.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="name">Daimler Truck North America LLC</div>
+              <div class="location">Portland, OR, USA</div>
+              <a href="https://northamerica.daimlertruck.com/"
+                >northamerica.daimlertruck.com</a
+              >
+              <ul>
+                <li>
+                  <div class="title">Vocational Applications Engineer</div>
+                  <div class="from">2011</div>
+                  <div class="to">2013</div>
+                  <p>
+                    In this role I supported the custom development of specialty
+                    vehicle controls for use in vocational truck applications
+                    (e.g., fire trucks, cement mixers, refuse trucks). I
+                    collaborated closely with customers to understand their
+                    unique requirements and translate them into effective
+                    control system solutions.
+                  </p>
+                </li>
+                <li>
+                  <div class="title">Body Controllers Engineer</div>
+                  <div class="from">2013</div>
+                  <div class="to">2020</div>
+                  <p>
+                    In this role I both supported the development of vehicle
+                    body controller software and integration, as well as lead
+                    the development of the XMC (eXtreme Modular Controller)
+                    platform—a highly flexible and scalable body controller
+                    architecture designed to support a wide range of vehicle
+                    applications. I worked closely with global, cross-functional
+                    teams to ensure that the XMC platform met the diverse needs
+                    of our customers while adhering to stringent quality and
+                    safety standards.
+                  </p>
+                </li>
+                <li>
+                  <div class="title">Diagnostics Gateway Engineer</div>
+                  <div class="from">2020</div>
+                  <div class="to">2022</div>
+                  <p>
+                    In this role I operated as the lead engineer for the North
+                    American diagnostic and vehicle communications gateway
+                    embedded controller (CGWce) for introduction of the CEEAce
+                    electrical architecture, including introduction of vehicle
+                    Ethernet and CAN-FD technologies to the truck architecture.
+                    I collaborated closely with global cross-functional teams to
+                    ensure seamless integration and meeting of functional and
+                    regulatory requirements driven by global needs.
+                  </p>
+                </li>
+                <li>
+                  <div class="title">Software Architect</div>
+                  <div class="from">2020</div>
+                  <div class="to">2022</div>
+                  <p>
+                    In this role I have been part of our research and
+                    development team investigating the next-generation software
+                    architecture for truck applications at Daimler Truck. Our
+                    team is working towards an SDV (Software Defined Vechile)
+                    architecture bridging together embedded microcontroller
+                    architectures with microprossessor technologies and
+                    service-oriented communication; DTOS (Daimler Truck
+                    Operating System). In this role I worked from Portland OR
+                    supporting Daimler Truck North America integrating with a
+                    global team.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="name">Daimler Truck AG</div>
+              <div class="location">Stuttgart, Baden-Württemberg, DE</div>
+              <a href="https://www.daimlertruck.com/en">daimlertruck.com</a>
+              <ul>
+                <li>
+                  <div class="title">Software Architect</div>
+                  <div class="from">2024</div>
+                  <div class="to">Present</div>
+                  <p>
+                    In this role I have continued my DTOS with the global team,
+                    but relocated to Stuttgart Germany to better directly
+                    support the team where initial design is being defined. My
+                    current role I operate as the lead application architect
+                    defining processes and best-practices defining our set of
+                    truck applications and service-catalog reshaping our
+                    approach to internal software development and software as a
+                    product.
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section class="skills">
+          <h2>Skills</h2>
+          <section class="language">
+            <h3>Languages</h3>
+            <ul>
+              <li>
+                <div class="name">English</div>
+                <div class="level">C2</div>
+                <div class="level-subtext">(Fluent)</div>
+              </li>
+              <li>
+                <div class="name">German</div>
+                <div class="level">A2-B1</div>
+                <div class="level-subtext">(Intermediate)</div>
+              </li>
+              <li>
+                <div class="name">Spanish</div>
+                <div class="level">A1</div>
+                <div class="level-subtext">(Basic)</div>
+              </li>
+            </ul>
+          </section>
+          <section class="software-technologies">
+            <h3>Software Technologies</h3>
+            <ul>
+              <li>Embedded C/C++</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+              <li>Node.js</li>
+              <li>Docker</li>
+              <li>Git/GitHub</li>
+              <li>CANalyzer/CANoe and CAPL</li>
+              <li>MATLAB/Simulink</li>
+            </ul>
+          </section>
+        </section>
+      </section>
+
+      <section id="projects">
+        <h1>Projects</h1>
+        <ul>
+          <li>
+            <div class="name">8-Channel MIDI Stepper-Motor Player</div>
+            <div class="year">Dec 2024</div>
+            <label for="link-steppers">GitHub Repository: </label>
+            <a
+              id="link-steppers"
+              href="https://github.com/TayticusPrime/RPi-Steppers"
+            >
+              LINK
+            </a>
+            <p class="description">
+              A joint Raspberry Pi and Arduino based system that reads MIDI
+              files and plays them via stepper motors using the motor frequency
+              to play individual notes. The Raspberry Pi consumes and translates
+              MIDI files into a proprietary set of commands via USB to an
+              Arduino controller responsible for driving the stepper motors
+              themselves. Several example MIDIs and hardware setup details are
+              included.
+            </p>
+          </li>
+          <li>
+            <div class="name">Open GL</div>
+            <div class="year">Nov 2023</div>
+            <label for="link-opengl">GitHub Repository: </label>
+            <a
+              id="link-opengl"
+              href="https://github.com/watermanpdx/CS547-Final-Project"
+            >
+              LINK
+            </a>
+            <p class="description">
+              An Open GL project created as part of the CS 547 Computer Graphics
+              at PSU. This project implements a 3D scene with various objects,
+              demonstrating several 3D graphics techniques built on top of Open
+              GL. Features include texture mapping, lighting effects, camera
+              controls, and object transformations. The project showcases the
+              fundamentals of 3D rendering and user interaction within a
+              graphical environment.
+            </p>
+          </li>
+          <li>
+            <div class="name">Sorting Algorithm Visualization</div>
+            <div class="year">Dec 2022</div>
+            <label for="link-sorting">GitHub Repository: </label>
+            <a
+              id="link-sorting"
+              href="https://github.com/TayticusPrime/Sorting-Algorithms"
+            >
+              LINK
+            </a>
+            <label for="link-sorting-webpage">Web-Animation: </label>
+            <a
+              id="link-sorting-webpage"
+              href="https://tayticusprime.github.io/Sorting-Algorithms/"
+            >
+              LINK
+            </a>
+            <p class="description">
+              A web-based visualization of various sorting algorithms
+              implemented in JavaScript and HTML/CSS. The project includes
+              animations that demonstrate how different sorting algorithms work,
+              such as Bubble Sort, Quick Sort, Merge Sort, and Insertion Sort.
+              Users can select different algorithms to see step-by-step how they
+              sort an array of numbers, providing an educational tool for
+              understanding sorting techniques.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h1>Contact Info</h1>
+        <div class="email">tayte.d.waterman@gmail.com</div>
+        <a
+          class="linkedin"
+          href="https://www.linkedin.com/in/tayte-waterman-27325b158"
+        >
+          LinkedIn
+        </a>
+        <div class="github">tayticusprime</div>
+      </section>
+    </main>
+
+    <footer></footer>
   </body>
 </html>
