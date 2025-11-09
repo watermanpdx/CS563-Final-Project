@@ -31,7 +31,7 @@ I use the Bootstrap resources [https://getbootstrap.com/docs/5.3/components/navb
 
 ### Page Presentation, Initial Javascript, and Card Layout
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [d19f4bf](https://github.com/watermanpdx/CS563-Final-Project/commit/d19f4bf)
 
 In this update I added Javascript to hide/show the different "pages" on my site via Javascript. Rather than implementing as multiple .html files I chose insted to use Javascript on the navbar clicks to dynamicaly enable/disable visibility. I did this via manipulation of the Bootstrap "d-none" class to hide elements in the dom when not in view. One small complication was that to ensure mutual-exclusivity between sections, the Javascript code needed, at each click, to iterate over all other nav elements to explicitly enable/disable them.
 
