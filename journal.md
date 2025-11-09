@@ -39,6 +39,10 @@ Next I added in a background image and started to convert the text-contents into
 
 Last, I moved the majority of the contents to Bootstrap cards as the layout, backfill, etc was a more visually-pleasing way of seeing the data. Unfortunately, to do this, that meant undoing a lot of the `<ul>`/`<li>` structures I had previously defined. To my previous remarks; this did require a bit of refactoring, but design-wise I found it helpful to have the general content defined before styling, even if it required reformatting. I found itentifying the "what" of the contents was less difficult than refactoring the "how."
 
+### Background Cleanup and ...
+
+I found after pushing my commit to GitHub, accessing my site via mobile resulted in tiling of my image. The first changes I needed to make involved adjustment to my custom styles.css to force my background image to fit to the vertical height of the viewport. I found this rather challenging, and had to try several iterations to find the right combination of attributes to use. Ultimately it came down to several iterations trying to identify what attributes (css) I really wanted to control and what supported the most responsiveness. Honestly, it required a lot of trial-and-error. At times it became difficult to separate out what was my lack of knowledge on css syntax and what was my misunderstanding of what I actually wanted to acheive (what dimensions I _really_ wanted to control)...
+
 ## References
 
 ### Included Images

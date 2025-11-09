@@ -4,8 +4,10 @@
 body {
   background-image: url(images/joel-vodell-8Ogfqvw15Rg-unsplash.jpg);
   background-attachment: fixed;
-  background-size: 100% auto;
-  background-position: center top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
 }
 
 /* Block space under fixed nav-bar */
