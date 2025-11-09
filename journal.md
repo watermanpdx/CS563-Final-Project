@@ -29,9 +29,18 @@ In this step I tried to focus on getting the bulk of the page information define
 
 I use the Bootstrap resources [https://getbootstrap.com/docs/5.3/components/navbar/#nav](https://getbootstrap.com/docs/5.3/components/navbar/#nav) as a template to set up my navbar. One small issue I encountered was that I both mistakenly included the wrong version of Bootstrap in my html file, as well as forgot to include the Bootstrap javascript file. This caused issues with the coloring theme (changed syntax between versions) as well as an inability to use the navbar collapse feature without javascript.
 
-### Page Presentation and Initial Javascript
+### Page Presentation, Initial Javascript, and Card Layout
+
+> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+
+In this update I added Javascript to hide/show the different "pages" on my site via Javascript. Rather than implementing as multiple .html files I chose insted to use Javascript on the navbar clicks to dynamicaly enable/disable visibility. I did this via manipulation of the Bootstrap "d-none" class to hide elements in the dom when not in view. One small complication was that to ensure mutual-exclusivity between sections, the Javascript code needed, at each click, to iterate over all other nav elements to explicitly enable/disable them.
+
+Next I added in a background image and started to convert the text-contents into bootstrap cards. One complication (that I have to admit I still don't understand, but have found via research) I encountered was "margin collapsing". I made my navigation bar fixed so that the user would always see it. that worked, but the content behind it was partially hidden. Initially I fixed this by adding a margin on top of "main". This worked, but I then wanted to add general margins to the content within main. I then decided to add a "dummy" element "nav-reserve" to insert padding at the top of the document of equivalent height to the navbar. This kind-of worked, but when I then applied margins to main, I had expected that the margin from nav-reserve and main would add, but they didn't; the top of main was always flush with the navbar. From research I learned that "margin collapsing" can cause margins to overlap. I still (as of this entry) do not understand the logic which leads to a "collapse", but switching nav-reserve to a padding rather than margin removed this. Now the margin on main is preserved, and does not merge with the header/nav. I will need to research/test this further to better understand...
+
+Last, I moved the majority of the contents to Bootstrap cards as the layout, backfill, etc was a more visually-pleasing way of seeing the data. Unfortunately, to do this, that meant undoing a lot of the `<ul>`/`<li>` structures I had previously defined. To my previous remarks; this did require a bit of refactoring, but design-wise I found it helpful to have the general content defined before styling, even if it required reformatting. I found itentifying the "what" of the contents was less difficult than refactoring the "how."
 
 ## References
 
-https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg
-https://unsplash.com/photos/photo-of-ocean-waves-at-daytime-wc9avd2RaN0
+### Included Images
+
+“iPhone‑Wallpaper 8Ogfqvw15Rg,” Unsplash, Accessed: Nov. 9, 2025. [Online]. Available: https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg

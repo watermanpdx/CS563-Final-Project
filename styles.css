@@ -10,5 +10,5 @@ body {
 
 /* Block space under fixed nav-bar */
 #nav-reserve {
-  margin-bottom: 56px;
+  padding-bottom: 56px;
 }
