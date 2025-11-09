@@ -1,1 +1,14 @@
 /* styles.css */
+
+/* Background image */
+body {
+  background-image: url(images/joel-vodell-8Ogfqvw15Rg-unsplash.jpg);
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-position: center top;
+}
+
+/* Block space under fixed nav-bar */
+#nav-reserve {
+  margin-bottom: 56px;
+}

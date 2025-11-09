@@ -19,7 +19,7 @@ One challenge that I encountered was that I have a personal GitHub account that 
 > **Disclaimer**
 > Changes to this repository will show up from the account [`TayticusPrime`](https://github.com/TayticusPrime). This personal account is owned by me, Tayte Waterman, and the work contained in this repo is soley my own.
 
-### Initial Setup
+### Content Population
 
 > Commit capturing this state: [d3b94de](https://github.com/watermanpdx/CS563-Final-Project/commit/d3b94de)
 
@@ -28,3 +28,10 @@ The initial content "skeleton" was set up including basic links, html structure,
 In this step I tried to focus on getting the bulk of the page information defined, with limited consideration to styling or final layout. My thought/approach is to try and avoid getting too caught up in design details too early before having a rough overview of what content would be included. I think it will be interesting to see if this helps the design (knowing what content to structure) or will cause challenges with needing to refactor as I finalize the design. Likewise, when structuring html, I already started adding some class and id information, but judiciously chose to not pre-define too much.
 
 I use the Bootstrap resources [https://getbootstrap.com/docs/5.3/components/navbar/#nav](https://getbootstrap.com/docs/5.3/components/navbar/#nav) as a template to set up my navbar. One small issue I encountered was that I both mistakenly included the wrong version of Bootstrap in my html file, as well as forgot to include the Bootstrap javascript file. This caused issues with the coloring theme (changed syntax between versions) as well as an inability to use the navbar collapse feature without javascript.
+
+### Page Presentation and Initial Javascript
+
+## References
+
+https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg
+https://unsplash.com/photos/photo-of-ocean-waves-at-daytime-wc9avd2RaN0
