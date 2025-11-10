@@ -41,7 +41,7 @@ Last, I moved the majority of the contents to Bootstrap cards as the layout, bac
 
 ### Background Cleanup and Footer Addition
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [f43c65f](https://github.com/watermanpdx/CS563-Final-Project/commit/f43c65f)
 
 I found after pushing my commit to GitHub, accessing my site via mobile resulted in tiling of my image. The first changes I needed to make involved adjustment to my custom styles.css to force my background image to fit to the vertical height of the viewport. I found this rather challenging, and had to try several iterations to find the right combination of attributes to use. Ultimately it came down to several iterations trying to identify what attributes (css) I really wanted to control and what supported the most responsiveness. Honestly, it required a lot of trial-and-error. At times it became difficult to separate out what was my lack of knowledge on css syntax and what was my misunderstanding of what I actually wanted to acheive (what dimensions I _really_ wanted to control)...
 
