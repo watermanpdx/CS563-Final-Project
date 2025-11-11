@@ -21,3 +21,6 @@ for (const link of navLinks) {
     }
   });
 }
+
+// Auto populate About with pictures from gallery
+const gallery = document.querySelector(".gallery");

@@ -47,6 +47,8 @@ I found after pushing my commit to GitHub, accessing my site via mobile resulted
 
 I also populated my footer and added into it links to some of my external accounts/profiles (GitHub and LinkedIn). I built it based on the bootstrap templates defined here: [https://getbootstrap.com/docs/5.3/examples/footers/](https://getbootstrap.com/docs/5.3/examples/footers/). Populating the content was rather trivial, but getting the formatting I wanted ended up being a little challenging. Specifically, when the content of the page was smaller (About and Contact) the footer would "float" in the middle of the page as the body didn't paint the entire viewport. I was able to find a solution by using bootstrap .flex-fill on <main> and .min-vh-100 on <body>. This forced the body to take up the entire viewport when the content was small, and "inflate" the main section in order to "push" the footer to the bottom. This last feature took a disproportionatly long time compared to others, and ultimately I had to find it out through a series of searches and references in the Bootstrap documentation [https://getbootstrap.com/docs/4.1/utilities/flex/](https://getbootstrap.com/docs/4.1/utilities/flex/) until I found something that provided the functionality that I wanted...
 
+### Refinement of About
+
 ## References
 
 ### Included Images
