@@ -1,7 +1,7 @@
 // scripts.js
 
 // Hide/Show sections based on navbar clicks
-const navLinks = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".nav-link:not(#contact-link)"); // Exclude contact link (moved to modal)
 for (const link of navLinks) {
   // Add click event-listener to all nav-link elements
   link.addEventListener("click", (event) => {
@@ -68,3 +68,28 @@ for (let photo of photos) {
   // https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML about inserting raw html
   gallery.insertAdjacentHTML("beforeend", photo_div);
 }
+
+// Manage modal form (contacts)
+const contact = document.getElementById("contact");
+const modal = bootstrap.Modal.getOrCreateInstance(contact);
+const form = document.getElementById("contact-form");
+
+// Clear form concents when modal is closed (hidden)
+contact.addEventListener("hidden.bs.modal", function () {
+  form.reset();
+});
+
+// Actions when submit/send is clicked
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const raw = new FormData(form); // https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData
+
+  data = {
+    email: raw.get("email"),
+    message: raw.get("message"),
+  };
+  console.log(data); // Surrogate for actual email code
+
+  form.reset();
+  modal.hide();
+});
