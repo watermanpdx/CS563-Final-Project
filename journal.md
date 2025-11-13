@@ -49,7 +49,7 @@ I also populated my footer and added into it links to some of my external accoun
 
 ### Refinement of About
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [9baedfc](https://github.com/watermanpdx/CS563-Final-Project/commit/9baedfc)
 
 In this set of updates I decided to update my About section. Initially, I recycled some text from LinkedIn and my personal resume, but it felt too formal and focused on just my career and education. I decided to change the wording and expand on a bit more personal content as well as include a set of personal photos. As one of my (very amateur) hobbies is photography, I chose to add a bunch of photos including my family, our travels, and interesting pics.
 
