@@ -49,6 +49,14 @@ I also populated my footer and added into it links to some of my external accoun
 
 ### Refinement of About
 
+> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+
+In this set of updates I decided to update my About section. Initially, I recycled some text from LinkedIn and my personal resume, but it felt too formal and focused on just my career and education. I decided to change the wording and expand on a bit more personal content as well as include a set of personal photos. As one of my (very amateur) hobbies is photography, I chose to add a bunch of photos including my family, our travels, and interesting pics.
+
+To display the photos, I assembled them together in a bootstrap grid, including options to adjust the number of columns with screen-size to make it more responsive. When in large screens there are 3 columns, mid 2, and small 1. I felt this gave a natural repsonsiveness "feel" when scaling the viewport width.
+
+One challenge/limitation I ran into was the management of my "About" section photo-gallery. I decided to add many photos (per above), but found that hard-coding it into the html was not the most efficient, scalable, nor pleasant... There were many divs I needed to copy repeatedly, and it was a pain to update as I changed photo order and the number of photos. I chose to use Javascript to populate the contents via insertion of html strings [https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML). This allowed me to just define the properties I wanted once, in one place and reduced a lot of repetitious code in my main html document. I defined in Javascript an array of files to iterate over and populate each div. This works, but I don't like the hard-coding of the photos. Ideally, I would have preferred to just let it identify and iterate over the files in `images/gallery/`, but I wasn't able to find a "vanilla" way to do so without using modules or frameworks outside of the scope of this course.
+
 ## References
 
 ### Included Images
