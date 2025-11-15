@@ -88,7 +88,10 @@ form.addEventListener("submit", (event) => {
     email: raw.get("email"),
     message: raw.get("message"),
   };
-  console.log(data); // Surrogate for actual email code
+
+  // Surrogate for actual email code - In a live website this would connect to email
+  console.log("New contact request received!");
+  console.log(data);
 
   form.reset();
   modal.hide();
