@@ -73,7 +73,7 @@ Last, I chose to not actually connect the form/contact data to anything live (as
 
 ### Contact Toast and Experience Overhaul
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [ca38201](https://github.com/watermanpdx/CS563-Final-Project/commit/ca38201)
 
 After some initial testing I didn't like how "silent" the contact request modal was to the user and decided to push some kind of alert when the request form was submitted. I found that Bootstrap has a nice and convenient features for this: Toast [https://getbootstrap.com/docs/5.3/components/toasts/](https://getbootstrap.com/docs/5.3/components/toasts/). I used the template here to add a toast linked with my form submission in Javascript. The toast automatically closes after a period or can be dismissed by the user. All of this logic was already implemented in Bootstrap making the integration very easy; I just needed to configure my html and then call the toast content in Javascript!
 
