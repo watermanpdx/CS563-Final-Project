@@ -46,7 +46,13 @@
               <a class="nav-link" href="#projects" aria-label="projects">
                 Projects
               </a>
-              <div id="contact-link" class="nav-link cursor-pointer" data-bs-toggle="modal" data-bs-target="#contact" aria-label="contact">
+              <div
+                id="contact-link"
+                class="nav-link cursor-pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#contact"
+                aria-label="contact"
+              >
                 Contact
               </div>
             </div>
@@ -96,275 +102,144 @@
         </div>
         <div class="container">
           <div id="gallery" class="row g-3">
-            <!-- Populated by Javascript -->
+            <!-- Photos: populated by Javascript -->
+          </div>
         </div>
       </section>
 
       <section id="experience" class="d-none">
-        <section class="education">
-          <h2>Education</h2>
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Oregon Institute of Technology</strong>
-              </h5>
-              <div class="location">Klamath Falls, OR, USA</div>
-              <a href="https://www.oit.edu/" target="_blank">oit.edu</a>
-              <div class="major">B.S. Mechanical Engineering</div>
-              <div class="minor">Applied Mathematics</div>
-              <div class="status">Graduated</div>
-              <div class="duration">
-                <div class="from">2005</div>
-                <div class="to">2009</div>
+        <div id="education-accordion" class="accordion mb-3">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="education">
+              <button
+                class="accordion-button collapsed collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-education"
+                aria-expanded="false"
+                aria-controls="collapse-education"
+              >
+                <h3>Education</h3>
+              </button>
+            </h2>
+            <div
+              id="collapse-education"
+              class="accordion-collapse collapse"
+              aria-labelledby="education"
+              data-bs-parent="#education-accordion"
+            >
+              <div id="education-contents" class="accordion-body">
+                <div class="row">
+                  <!-- Education: Populated by Javascript -->
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Portland State University</strong>
-              </h5>
-              <div class="location">Portland, OR, USA</div>
-              <a href="https://www.pdx.edu/" target="_blank">pdx.edu</a>
-              <div class="major">Post-Bac Computer Sccience</div>
-              <div class="status">Completed (Non-Degree)</div>
-              <div class="duration">
-                <div class="from">2020</div>
-                <div class="to">2022</div>
+        <div id="accreditations-accordion" class="accordion mb-3">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="accreditations">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-accreditations"
+                aria-expanded="false"
+                aria-controls="collapse-accreditations"
+              >
+                <h3>Accreditations</h3>
+              </button>
+            </h2>
+            <div
+              id="collapse-accreditations"
+              class="accordion-collapse collapse"
+              aria-labelledby="accreditations"
+              data-bs-parent="#accreditations-accordion"
+            >
+              <div id="accreditations-contents" class="accordion-body">
+                <div class="row">
+                  <!-- Accreditations: Populated by Javascript -->
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Portland State University</strong>
-              </h5>
-              <div class="location">Portland, OR, USA</div>
-              <a href="https://www.pdx.edu/" target="_blank">pdx.edu</a>
-              <div class="major">M.S. Computer Sccience</div>
-              <div class="status">In-Progress</div>
-              <div class="duration">
-                <div class="from">2022</div>
-                <div class="to">Current</div>
+        <div id="work-experience-accordion" class="accordion mb-3">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="work-experience">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-work-experience"
+                aria-expanded="false"
+                aria-controls="collapse-work-experience"
+              >
+                <h3>Work Experience</h3>
+              </button>
+            </h2>
+            <div
+              id="collapse-work-experience"
+              class="accordion-collapse collapse"
+              aria-labelledby="work-experience"
+              data-bs-parent="#work-experience-accordion"
+            >
+              <div id="work-experience-contents" class="accordion-body">
+                <div class="row">
+                  <!-- Work experience: Populated by Javascript -->
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section class="accreditations">
-          <h2>Accreditations</h2>
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Professional Engineer, Mechanical Engineering</strong>
-              </h5>
-              <div class="reference-no">82548PE</div>
-              <div class="organization">OSBEELS</div>
-              <a href="https://www.oregon.gov/osbeels/" target="_blank">oregon.gov/osbeels/</a>
-              <div class="status">Active</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="work-experience">
-          <h2>Work Experience</h2>
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Gigaphoton USA Inc</strong>
-              </h5>
-              <div class="location">Beaverton, OR, USA</div>
-              <a href="https://www.gigaphoton.com/" target="_blank">gigaphoton.com</a>
-              <div class="title">Field Service Engineer</div>
-              <div class="from">2010</div>
-              <div class="to">2011</div>
-              <p>
-                In this role I supported the installation, maintenance, and
-                repair of advanced laser systems used in semiconductor
-                manufacturing. I traveled to customer sites to perform
-                diagnostics, troubleshoot issues, and ensure optimal performance
-                of the equipment.
-              </p>
-            </div>
-          </div>
-
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Daimler Truck North America LLC</strong>
-              </h5>
-              <div class="location">Portland, OR, USA</div>
-              <a href="https://northamerica.daimlertruck.com/" target="_blank">
-                northamerica.daimlertruck.com
-              </a>
-              <div class="title">Vocational Applications Engineer</div>
-              <div class="from">2011</div>
-              <div class="to">2013</div>
-              <p>
-                In this role I supported the custom development of specialty
-                vehicle controls for use in vocational truck applications (e.g.,
-                fire trucks, cement mixers, refuse trucks). I collaborated
-                closely with customers to understand their unique requirements
-                and translate them into effective control system solutions.
-              </p>
-            </div>
-          </div>
-
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Daimler Truck North America LLC</strong>
-              </h5>
-              <div class="location">Portland, OR, USA</div>
-              <a href="https://northamerica.daimlertruck.com/" target="_blank">
-                northamerica.daimlertruck.com
-              </a>
-              <div class="title">Body Controllers Engineer</div>
-              <div class="from">2013</div>
-              <div class="to">2020</div>
-              <p>
-                In this role I both supported the development of vehicle body
-                controller software and integration, as well as lead the
-                development of the XMC (eXtreme Modular Controller) platform—a
-                highly flexible and scalable body controller architecture
-                designed to support a wide range of vehicle applications. I
-                worked closely with global, cross-functional teams to ensure
-                that the XMC platform met the diverse needs of our customers
-                while adhering to stringent quality and safety standards.
-              </p>
-            </div>
-          </div>
-
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Daimler Truck North America LLC</strong>
-              </h5>
-              <div class="location">Portland, OR, USA</div>
-              <a href="https://northamerica.daimlertruck.com/" target="_blank">
-                northamerica.daimlertruck.com
-              </a>
-              <div class="title">Diagnostics Gateway Engineer</div>
-              <div class="from">2020</div>
-              <div class="to">2022</div>
-              <p>
-                In this role I operated as the lead engineer for the North
-                American diagnostic and vehicle communications gateway embedded
-                controller (CGWce) for introduction of the CEEAce electrical
-                architecture, including introduction of vehicle Ethernet and
-                CAN-FD technologies to the truck architecture. I collaborated
-                closely with global cross-functional teams to ensure seamless
-                integration and meeting of functional and regulatory
-                requirements driven by global needs.
-              </p>
-            </div>
-          </div>
-
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Daimler Truck North America LLC</strong>
-              </h5>
-              <div class="location">Portland, OR, USA</div>
-              <a href="https://northamerica.daimlertruck.com/" target="_blank">
-                northamerica.daimlertruck.com\
-              </a>
-              <div class="title">Software Architect</div>
-              <div class="from">2020</div>
-              <div class="to">2022</div>
-              <p>
-                In this role I have been part of our research and development
-                team investigating the next-generation software architecture for
-                truck applications at Daimler Truck. Our team is working towards
-                an SDV (Software Defined Vechile) architecture bridging together
-                embedded microcontroller architectures with microprossessor
-                technologies and service-oriented communication; DTOS (Daimler
-                Truck Operating System). In this role I worked from Portland OR
-                supporting Daimler Truck North America integrating with a global
-                team.
-              </p>
-            </div>
-          </div>
-
-          <div class="card my-3">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>Daimler Truck AG</strong>
-              </h5>
-              <div class="location">Stuttgart, Baden-Württemberg, DE</div>
-              <a href="https://www.daimlertruck.com/en" target="_blank">daimlertruck.com</a>
-              <div class="title">Software Architect</div>
-              <div class="from">2024</div>
-              <div class="to">Present</div>
-              <p>
-                In this role I have continued my DTOS with the global team, but
-                relocated to Stuttgart Germany to better directly support the
-                team where initial design is being defined. My current role I
-                operate as the lead application architect defining processes and
-                best-practices defining our set of truck applications and
-                service-catalog reshaping our approach to internal software
-                development and software as a product.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="skills">
-          <h2>Skills</h2>
-          <section class="language">
-            <h3>Languages</h3>
-            <div class="card my-3">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <strong>English</strong>
-                </h5>
-                <div class="level">C2</div>
-                <div class="level-subtext">(Fluent)</div>
+        <div id="skills-accordion" class="accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="skills">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse-skills"
+                aria-expanded="false"
+                aria-controls="collapse-skills"
+              >
+                <h3>Skills</h3>
+              </button>
+            </h2>
+            <div
+              id="collapse-skills"
+              class="accordion-collapse collapse"
+              aria-labelledby="skills"
+              data-bs-parent="#skills-accordion"
+            >
+              <div class="accordion-body">
+                <div class="card my-3">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <strong>Languages</strong>
+                    </h5>
+                    <div id="language-contents" class="row">
+                      <!-- Language: populated by Javascript -->
+                    </div>
+                  </div>
+                </div>
+                <div class="card my-3">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <strong>Software Technologies</strong>
+                    </h5>
+                    <div id="software-technologies-contents" class="row"></div>
+                      <!-- Software technologies: populated by Javascript -->
+                     </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="card my-3">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <strong>German</strong>
-                </h5>
-                <div class="level">A2-B1</div>
-                <div class="level-subtext">(Intermediate)</div>
-              </div>
-            </div>
-
-            <div class="card my-3">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <strong>Spanish</strong>
-                </h5>
-                <div class="level">A1</div>
-                <div class="level-subtext">(Basic)</div>
-              </div>
-            </div>
-          </section>
-
-          <section class="software-technologies">
-            <h3>Software Technologies</h3>
-            <div class="card my-3">
-              <div class="card-body">
-                <ul>
-                  <li>Embedded C/C++</li>
-                  <li>Python</li>
-                  <li>JavaScript</li>
-                  <li>HTML/CSS</li>
-                  <li>Node.js</li>
-                  <li>Docker</li>
-                  <li>Git/GitHub</li>
-                  <li>CANalyzer/CANoe and CAPL</li>
-                  <li>MATLAB/Simulink</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </section>
+          </div>
+        </div>
       </section>
 
       <section id="projects" class="d-none">
@@ -457,18 +332,31 @@
       </section>
 
       <!-- https://getbootstrap.com/docs/5.0/components/modal/ -->
-      <section id="contact" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <section
+        id="contact"
+        class="modal fade"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Contact Me!</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <!-- https://getbootstrap.com/docs/4.1/components/forms/ -->
               <form id="contact-form">
                 <div class="form-group">
-                  <ul class="nav col-md-4 justify-content-start list-unstyled d-flex">
+                  <ul
+                    class="nav col-md-4 justify-content-start list-unstyled d-flex"
+                  >
                     <li class="ms-3">
                       <a
                         class="text-body-secondary"
@@ -476,7 +364,12 @@
                         target="_blank"
                         aria-label="github"
                       >
-                        <image src="images/github.png" width="24" height="24"> </image>
+                        <img
+                          src="images/icons/github.png"
+                          width="24"
+                          height="24"
+                        >
+                        </img>
                       </a>
                     </li>
                     <li class="ms-3">
@@ -486,7 +379,12 @@
                         target="_blank"
                         aria-label="github"
                       >
-                        <image src="images/github.png" width="24" height="24"> </image>
+                        <img
+                          src="images/icons/github.png"
+                          width="24"
+                          height="24"
+                        >
+                        </img>
                       </a>
                     </li>
                     <li class="ms-3">
@@ -496,21 +394,45 @@
                         target="_blank"
                         aria-label="linkedin"
                       >
-                        <image src="images/linkedin.png" width="24" height="24"> </image>
+                        <img
+                          src="images/icons/linkedin.png"
+                          width="24"
+                          height="24"
+                        >
+                        </img>
                       </a>
                     </li>
                   </ul>
                 </div>
                 <div class="form-group">
                   <label for="form-email">Email</label>
-                  <input id="form-email" type="email" name="email" class="form-control" placeholder="Enter your email">
+                  <input
+                    id="form-email"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                  />
                 </div>
                 <div class="form-group">
                   <label for="form-message">Message</label>
-                  <textarea id="form-message" type="text" name="message" class="form-control" rows="3" placeholder="Enter your message"></textarea>
+                  <textarea
+                    id="form-message"
+                    type="text"
+                    name="message"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Enter your message"
+                  ></textarea>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
                   <button type="submit" class="btn btn-primary">Send</button>
                 </div>
               </form>
@@ -519,23 +441,26 @@
         </div>
       </section>
 
-      
-      <div id="contact-backup" class="d-none">
-        <div class="card my-3">
-          <div class="card-body">
-            <h5 class="card-title">
-              <strong>Contact Info</strong>
-            </h5>
-            <div class="email">tayte.d.waterman@gmail.com</div>
-            <a
-              class="linkedin"
-              href="https://www.linkedin.com/in/tayte-waterman-27325b158"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            <div class="github">tayticusprime</div>
+      <!-- https://getbootstrap.com/docs/5.3/components/toasts/-->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="contact-toast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto">Thank You!</strong>
+            <small>Just now</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
           </div>
+          <div class="toast-body">Contact request has been sent</div>
         </div>
       </div>
     </main>
@@ -558,7 +483,8 @@
               target="_blank"
               aria-label="github"
             >
-              <image src="images/github.png" width="24" height="24"> </image>
+              <img src="images/icons/github.png" width="24" height="24">
+              </img>
             </a>
           </li>
           <li class="ms-3">
@@ -568,7 +494,8 @@
               target="_blank"
               aria-label="github"
             >
-              <image src="images/github.png" width="24" height="24"> </image>
+              <img src="images/icons/github.png" width="24" height="24">
+              </img>
             </a>
           </li>
           <li class="ms-3">
@@ -578,7 +505,8 @@
               target="_blank"
               aria-label="linkedin"
             >
-              <image src="images/linkedin.png" width="24" height="24"> </image>
+              <img src="images/icons/linkedin.png" width="24" height="24">
+              </img>
             </a>
           </li>
         </ul>
