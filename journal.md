@@ -59,7 +59,7 @@ One challenge/limitation I ran into was the management of my "About" section pho
 
 ### Shift of Contacts to Modal and Link Updates
 
-> Commit capturing this state: [e19ace2](https://github.com/watermanpdx/CS563-Final-Project/commit/e19ace2)
+> Commit capturing this state: [9ba85a3](https://github.com/watermanpdx/CS563-Final-Project/commit/9ba85a3)
 
 In this update I chose to move the contact section away from being a dedicated page into a modal element + form. In it I wanted to include an email and message to allow the user to reach out and send a message. Along with that I want it to summarize some of my key links/accounts (GitHub, LinkedIn).
 
