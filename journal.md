@@ -89,6 +89,8 @@ In this section I updated the Projects section of my site. One item I wanted to 
 
 I also updated my project layouts. I moved the date and link for each into a footer and transferred each to a card. I chose not to do this programatically as with the experience section as I wanted more flexibility with each to customize them. I also only had three sections to manage. I also updated my title (including on my About page) to be a card. Although I know this isn't really how cards are generally used, I liked the look of it given my background image.
 
+I also chose to add a footer to each of my project cards with a GitHub icon linking to my source code. I may revisit this. I like how it looks visually, but I'm also concerned that its not apparent that the icons themselves are links. Normally, there is so much on webpages in terms of icons and links I personally tend to ignore such icons; yet they seem to be common. I'd be curious from a design (not technical-design) whether there are better, or more standard practices.
+
 ## References
 
 ### Included Images

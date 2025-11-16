@@ -256,14 +256,14 @@
 
         <div class="row justify-content-end">
           <div class="col-lg-10 col-12">
-            <div class="card my-3">
+            <div class="card my-">
               <div class="card-body">
                 <h5 class="card-title">
                   <strong>8-Channel MIDI Stepper-Motor Player</strong>
                 </h5>
 
-                <div class="row">
-                  <div class="col-6">
+                <div class="row mb-3">
+                  <div class="col-lg-8 col-12">
                     <div class="ratio ratio-16x9">
                       <iframe
                         class="rounded"
@@ -280,15 +280,36 @@
                   </div>
                 </div>
 
-                <p class="description">
-                  A joint Raspberry Pi and Arduino based system that reads MIDI
-                  files and plays them via stepper motors using the motor
-                  frequency to play individual notes. The Raspberry Pi consumes
-                  and translates MIDI files into a proprietary set of commands
-                  via USB to an Arduino controller responsible for driving the
-                  stepper motors themselves. Several example MIDIs and hardware
-                  setup details are included.
+                <h5>About</h5>
+                <p>
+                  In this project is defined joint Raspberry Pi and Arduino code
+                  used to play MIDI-format music files over 8 stepper motors.
+                  The Raspberry Pi code reads MIDI-format music files and
+                  translates them into note commands split across 8-channels.
+                  The 8-channels each map to a stepper motor, which "plays" the
+                  corresponding note via the frequency used to drive it. Two
+                  Arduinos are used, controlling 4-steppers each. This project
+                  explores a combined micro-processor and micro-controller
+                  architecture, unifying the needs of high-precision real-time
+                  controls, and higher abstraction file-system access and
+                  processing.
                 </p>
+
+                <h5>Images</h5>
+                <div class="row g-3 mb-3">
+                  <div class="col-lg-6 col-12">
+                    <img
+                      src="images/projects/steppers.jpg"
+                      class="img-fluid object-fit-cover rounded"
+                    />
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <img
+                      src="images/projects/diagram.png"
+                      class="img-fluid object-fit-cover rounded"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div class="card-footer">
@@ -322,8 +343,8 @@
                   <strong>OpenGL Demo</strong>
                 </h5>
 
-                <div class="row">
-                  <div class="col-6">
+                <div class="row mb-3">
+                  <div class="col-lg-8 col-12">
                     <div class="ratio ratio-16x9">
                       <img
                         src="images/projects/birds.jpg"
@@ -333,15 +354,34 @@
                   </div>
                 </div>
 
-                <p class="description">
-                  An Open GL project created as part of the CS 547 Computer
-                  Graphics at PSU. This project implements a 3D scene with
-                  various objects, demonstrating several 3D graphics techniques
-                  built on top of Open GL. Features include texture mapping,
-                  lighting effects, camera controls, and object transformations.
-                  The project showcases the fundamentals of 3D rendering and
-                  user interaction within a graphical environment.
+                <h5>About</h5>
+                <p>
+                  In this project I implemented a 3D scene via the C++ OpenGL
+                  library for my CS547, Computer Graphics final at PSU. The
+                  implemented scene is an outdoor, forest "park" containing
+                  several features used to demonstrate different OpenGL features
+                  and 3D graphics techniques. In example, there is a central
+                  mountain with various levels of proceduraly generated
+                  face-detail, animated fyling birds, parametric objects which
+                  can vary between instances, and an ability to switch views and
+                  change environmental lighting.
                 </p>
+
+                <h5>Images</h5>
+                <div class="row justify-content-center g-3">
+                  <div class="col-12">
+                    <img
+                      src="images/projects/mountain.jpg"
+                      class="img-fluid object-fit-cover rounded"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <img
+                      src="images/projects/sky.jpg"
+                      class="img-fluid object-fit-cover rounded"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div class="card-footer">
@@ -375,8 +415,8 @@
                   <strong>Sorting Algorithm Visualization</strong>
                 </h5>
 
-                <div class="row">
-                  <div class="col-6">
+                <div class="row mb-3">
+                  <div class="col-lg-8 col-12">
                     <div class="ratio ratio-16x9">
                       <img
                         src="images/projects/sorting.jpg"
@@ -386,7 +426,8 @@
                   </div>
                 </div>
 
-                <p class="description">
+                <h5>About</h5>
+                <p>
                   A web-based visualization of various sorting algorithms
                   implemented in JavaScript and HTML/CSS. The project includes
                   animations that demonstrate how different sorting algorithms
@@ -395,13 +436,12 @@
                   step-by-step how they sort an array of numbers, providing an
                   educational tool for understanding sorting techniques.
                 </p>
-                <label for="link-sorting-webpage">Try it out! </label>
                 <a
                   id="link-sorting-webpage"
                   href="https://tayticusprime.github.io/Sorting-Algorithms/"
                   target="_blank"
                 >
-                  LINK
+                  <h5>Try it out!</h5>
                 </a>
               </div>
 
