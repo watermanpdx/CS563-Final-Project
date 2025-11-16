@@ -107,7 +107,7 @@ form.addEventListener("submit", (event) => {
 const educationData = [
   {
     org: "Portland State University",
-    logo: "images/psu.png",
+    logo: "images/logos/psu.png",
     link: { url: "https://www.pdx.edu/", text: "pdx.edu" },
     location: "Portland, OR, USA",
     major: "Master's Computer Science",
@@ -116,7 +116,7 @@ const educationData = [
   },
   {
     org: "Portland State University",
-    logo: "images/psu.png",
+    logo: "images/logos/psu.png",
     link: { url: "https://www.pdx.edu/", text: "pdx.edu" },
     location: "Portland, OR, USA",
     major: "Post-Bac Computer Science",
@@ -125,7 +125,7 @@ const educationData = [
   },
   {
     org: "Oregon Institute of Technology",
-    logo: "images/oit.png",
+    logo: "images/logos/oit.png",
     link: { url: "https://www.pdx.edu/", text: "pdx.edu" },
     location: "Klamath Falls, OR, USA",
     major: "Bachelor's Mechanical Engineering",
@@ -170,7 +170,7 @@ const accreditationData = [
     cert: "Profesional Engineer, Mechanical Engineering",
     org: "Oregon State Board of Examiners for Engineering & Land Surveying",
     location: "Oregon, USA",
-    logo: "images/osbeels.png",
+    logo: "images/logos/osbeels.png",
     link: {
       url: "https://www.oregon.gov/osbeels/",
       text: "oregon.gov/osbeels/",
@@ -217,7 +217,7 @@ const workExperienceData = [
   {
     org: "Daimler Truck AG",
     location: "Stuttgart, Baden-Württemberg, DE",
-    logo: "images/dtag.png",
+    logo: "images/logos/dtag.png",
     link: {
       url: "https://www.daimlertruck.com/en",
       text: "daimlertruck.com",
@@ -230,7 +230,7 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/dtna.png",
+    logo: "images/logos/dtna.png",
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -243,7 +243,7 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/dtna.png",
+    logo: "images/logos/dtna.png",
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -256,7 +256,7 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/dtna.png",
+    logo: "images/logos/dtna.png",
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -269,7 +269,7 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/dtna.png",
+    logo: "images/logos/dtna.png",
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -282,7 +282,7 @@ const workExperienceData = [
   {
     org: "Gigaphoton USA Inc.",
     location: "Beaverton, OR, USA",
-    logo: "images/gigaphoton.jpg",
+    logo: "images/logos/gigaphoton.jpg",
     link: {
       url: "https://www.gigaphoton.com/",
       text: "gigaphoton.com",

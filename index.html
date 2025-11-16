@@ -40,11 +40,11 @@
               <a class="nav-link active" href="#about" aria-label="about">
                 About
               </a>
-              <a class="nav-link" href="#experience" aria-label="experience">
-                Experience
-              </a>
               <a class="nav-link" href="#projects" aria-label="projects">
                 Projects
+              </a>
+              <a class="nav-link" href="#experience" aria-label="experience">
+                Experience
               </a>
               <div
                 id="contact-link"
@@ -68,7 +68,12 @@
         <!-- https://getbootstrap.com/docs/5.0/components/card/ -->
         <div class="card my-3">
           <div class="card-body">
-            <h5 class="card-title"><strong>About Me</strong></h5>
+            <h3>About Me</h3>
+          </div>
+        </div>
+
+        <div class="card my-3">
+          <div class="card-body">
             <p class="card-text">
               My name is <strong>Tayte Waterman</strong>. I'm an engineer,
               developer, dad, and restless nerd at heart. I love to learn new
@@ -108,7 +113,7 @@
       </section>
 
       <section id="experience" class="d-none">
-        <div id="education-accordion" class="accordion mb-3">
+        <div id="education-accordion" class="accordion my-3">
           <div class="accordion-item">
             <h2 class="accordion-header" id="education">
               <button
@@ -231,9 +236,9 @@
                     <h5 class="card-title">
                       <strong>Software Technologies</strong>
                     </h5>
-                    <div id="software-technologies-contents" class="row"></div>
+                    <div id="software-technologies-contents" class="row">
                       <!-- Software technologies: populated by Javascript -->
-                     </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -243,90 +248,183 @@
       </section>
 
       <section id="projects" class="d-none">
-        <h1>Projects</h1>
         <div class="card my-3">
           <div class="card-body">
-            <h5 class="card-title">
-              <strong>8-Channel MIDI Stepper-Motor Player</strong>
-            </h5>
-            <div class="year">Dec 2024</div>
-            <label for="link-steppers">GitHub Repository: </label>
-            <a
-              id="link-steppers"
-              href="https://github.com/TayticusPrime/RPi-Steppers"
-              target="_blank"
-            >
-              LINK
-            </a>
-            <p class="description">
-              A joint Raspberry Pi and Arduino based system that reads MIDI
-              files and plays them via stepper motors using the motor frequency
-              to play individual notes. The Raspberry Pi consumes and translates
-              MIDI files into a proprietary set of commands via USB to an
-              Arduino controller responsible for driving the stepper motors
-              themselves. Several example MIDIs and hardware setup details are
-              included.
-            </p>
+            <h3>Projects</h3>
           </div>
         </div>
 
-        <div class="card my-3">
-          <div class="card-body">
-            <h5 class="card-title">
-              <strong>OpenGL</strong>
-            </h5>
-            <div class="year">Nov 2023</div>
-            <label for="link-opengl">GitHub Repository: </label>
-            <a
-              id="link-opengl"
-              href="https://github.com/watermanpdx/CS547-Final-Project"
-              target="_blank"
-            >
-              LINK
-            </a>
-            <p class="description">
-              An Open GL project created as part of the CS 547 Computer Graphics
-              at PSU. This project implements a 3D scene with various objects,
-              demonstrating several 3D graphics techniques built on top of Open
-              GL. Features include texture mapping, lighting effects, camera
-              controls, and object transformations. The project showcases the
-              fundamentals of 3D rendering and user interaction within a
-              graphical environment.
-            </p>
+        <div class="row justify-content-end">
+          <div class="col-lg-10 col-12">
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>8-Channel MIDI Stepper-Motor Player</strong>
+                </h5>
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="ratio ratio-16x9">
+                      <iframe
+                        class="rounded"
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/e9bMyeX0_78?si=hAHnilJ12JS-U1JA"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="description">
+                  A joint Raspberry Pi and Arduino based system that reads MIDI
+                  files and plays them via stepper motors using the motor
+                  frequency to play individual notes. The Raspberry Pi consumes
+                  and translates MIDI files into a proprietary set of commands
+                  via USB to an Arduino controller responsible for driving the
+                  stepper motors themselves. Several example MIDIs and hardware
+                  setup details are included.
+                </p>
+              </div>
+
+              <div class="card-footer">
+                <div class="row justify-content-end">
+                  <div class="col-auto">Tayte Waterman | Dec 2024</div>
+                  <div class="col-auto">
+                    <a
+                      class="text-body-secondary"
+                      href="https://github.com/TayticusPrime/RPi-Steppers"
+                      target="_blank"
+                      aria-label="r pi steppers repository"
+                    >
+                      <img
+                        src="images/icons/github.png"
+                        width="24"
+                        height="24"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="card my-3">
-          <div class="card-body">
-            <h5 class="card-title">
-              <strong>Sorting Algorithm Visualization</strong>
-            </h5>
-            <div class="year">Dec 2022</div>
-            <label for="link-sorting">GitHub Repository: </label>
-            <a
-              id="link-sorting"
-              href="https://github.com/TayticusPrime/Sorting-Algorithms"
-              target="_blank"
-            >
-              LINK
-            </a>
-            <label for="link-sorting-webpage">Web-Animation: </label>
-            <a
-              id="link-sorting-webpage"
-              href="https://tayticusprime.github.io/Sorting-Algorithms/"
-              target="_blank"
-            >
-              LINK
-            </a>
-            <p class="description">
-              A web-based visualization of various sorting algorithms
-              implemented in JavaScript and HTML/CSS. The project includes
-              animations that demonstrate how different sorting algorithms work,
-              such as Bubble Sort, Quick Sort, Merge Sort, and Insertion Sort.
-              Users can select different algorithms to see step-by-step how they
-              sort an array of numbers, providing an educational tool for
-              understanding sorting techniques.
-            </p>
+        <div class="row justify-content-start">
+          <div class="col-lg-10 col-12">
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>OpenGL Demo</strong>
+                </h5>
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="ratio ratio-16x9">
+                      <img
+                        src="images/projects/birds.jpg"
+                        class="img-fluid object-fit-cover rounded"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <p class="description">
+                  An Open GL project created as part of the CS 547 Computer
+                  Graphics at PSU. This project implements a 3D scene with
+                  various objects, demonstrating several 3D graphics techniques
+                  built on top of Open GL. Features include texture mapping,
+                  lighting effects, camera controls, and object transformations.
+                  The project showcases the fundamentals of 3D rendering and
+                  user interaction within a graphical environment.
+                </p>
+              </div>
+
+              <div class="card-footer">
+                <div class="row justify-content-end">
+                  <div class="col-auto">Tayte Waterman | Nov 2023</div>
+                  <div class="col-auto">
+                    <a
+                      class="text-body-secondary"
+                      href="https://github.com/watermanpdx/CS547-Final-Project"
+                      target="_blank"
+                      aria-label="open gl demo repository"
+                    >
+                      <img
+                        src="images/icons/github.png"
+                        width="24"
+                        height="24"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-end">
+          <div class="col-lg-10 col-12">
+            <div class="card my-3">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <strong>Sorting Algorithm Visualization</strong>
+                </h5>
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="ratio ratio-16x9">
+                      <img
+                        src="images/projects/sorting.jpg"
+                        class="img-fluid object-fit-cover rounded"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <p class="description">
+                  A web-based visualization of various sorting algorithms
+                  implemented in JavaScript and HTML/CSS. The project includes
+                  animations that demonstrate how different sorting algorithms
+                  work, such as Bubble Sort, Quick Sort, Merge Sort, and
+                  Insertion Sort. Users can select different algorithms to see
+                  step-by-step how they sort an array of numbers, providing an
+                  educational tool for understanding sorting techniques.
+                </p>
+                <label for="link-sorting-webpage">Try it out! </label>
+                <a
+                  id="link-sorting-webpage"
+                  href="https://tayticusprime.github.io/Sorting-Algorithms/"
+                  target="_blank"
+                >
+                  LINK
+                </a>
+              </div>
+
+              <div class="card-footer">
+                <div class="row justify-content-end">
+                  <div class="col-auto">Tayte Waterman | Dec 2022</div>
+                  <div class="col-auto">
+                    <a
+                      class="text-body-secondary"
+                      href="https://github.com/TayticusPrime/Sorting-Algorithms"
+                      target="_blank"
+                      aria-label="sorting algorithms repository"
+                    >
+                      <img
+                        src="images/icons/github.png"
+                        width="24"
+                        height="24"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -368,8 +466,7 @@
                           src="images/icons/github.png"
                           width="24"
                           height="24"
-                        >
-                        </img>
+                        />
                       </a>
                     </li>
                     <li class="ms-3">
@@ -383,8 +480,7 @@
                           src="images/icons/github.png"
                           width="24"
                           height="24"
-                        >
-                        </img>
+                        />
                       </a>
                     </li>
                     <li class="ms-3">
@@ -398,8 +494,7 @@
                           src="images/icons/linkedin.png"
                           width="24"
                           height="24"
-                        >
-                        </img>
+                        />
                       </a>
                     </li>
                   </ul>
@@ -483,8 +578,7 @@
               target="_blank"
               aria-label="github"
             >
-              <img src="images/icons/github.png" width="24" height="24">
-              </img>
+              <img src="images/icons/github.png" width="24" height="24" />
             </a>
           </li>
           <li class="ms-3">
@@ -494,8 +588,7 @@
               target="_blank"
               aria-label="github"
             >
-              <img src="images/icons/github.png" width="24" height="24">
-              </img>
+              <img src="images/icons/github.png" width="24" height="24" />
             </a>
           </li>
           <li class="ms-3">
@@ -505,8 +598,7 @@
               target="_blank"
               aria-label="linkedin"
             >
-              <img src="images/icons/linkedin.png" width="24" height="24">
-              </img>
+              <img src="images/icons/linkedin.png" width="24" height="24" />
             </a>
           </li>
         </ul>
