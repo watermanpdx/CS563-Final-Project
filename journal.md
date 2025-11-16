@@ -83,7 +83,7 @@ Next for most of the contents I found that I wanted to implement a consistent la
 
 ### Projects Page Update
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [7f186ba](https://github.com/watermanpdx/CS563-Final-Project/commit/7f186ba)
 
 In this section I updated the Projects section of my site. One item I wanted to add was a video of at least one of my projects (the RPi-Stepper). Initially, I wanted to directly embed this into my site and learn how to play/control it via html directly. However, from the video-size and hosting off of GitHub this was infeasible. However, I found a very easy and convenient solution. I hosted the desired video on Youtube and referenced it directly via `<iframe>`. This was really nice as I didn't have to worry about local storage or challenges with video UI. Also considering the populariry of Youtube, using its UI seemed to be a generally good approach. One issue I encountered was that I was unable to add my Youtube url directly into the `<iframe>` tag. Doing so I ran into security issues flagged by my browser alerting the the Youtube security policy wouldn't allow direct embedded references to the url. However, this was easy to overcome. It turns out that in Youtube itself, using share/embedded, Youtube provides a specific embedded url, and even formats it into an `<iframe>` tag directly. I was able to include this directly to link to the video. Beyond that, I was able to use basic Bootsrap formatting on it as if it were any other type of image or div.
 
