@@ -2,59 +2,88 @@
 
 // Hide/Show sections based on navbar clicks ======================================================
 const navLinks = document.querySelectorAll(".nav-link:not(#contact-link)"); // Exclude contact link (moved to modal)
+const navCollapse = bootstrap.Collapse.getOrCreateInstance(
+  // https://getbootstrap.com/docs/5.0/components/collapse/
+  document.getElementById("navbarNavAltMarkup"),
+  { toggle: false } // https://stackoverflow.com/questions/75949166/why-does-bootstrap-5s-getorcreateinstance-method-for-collapsibles-immediately
+);
+
 for (const link of navLinks) {
-  // Add click event-listener to all nav-link elements
+  // Add click event listener to all nav-link elements
   link.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent shifting view to section
+    const clickedLink = event.currentTarget;
 
-    for (const link of navLinks) {
-      const targetSection = document.querySelector(link.getAttribute("href"));
-      if (link == event.target) {
+    for (const navLink of navLinks) {
+      const targetSection = document.querySelector(
+        navLink.getAttribute("href")
+      );
+
+      if (navLink === clickedLink) {
         // Unhide clicked section and highlight link
-        link.classList.add("active");
+        navLink.classList.add("active");
         targetSection.classList.remove("d-none");
       } else {
         // Hide all others and unhighlight link
-        link.classList.remove("active");
+        navLink.classList.remove("active");
         targetSection.classList.add("d-none");
       }
     }
+
+    // Close the expanded navbar
+    navCollapse.hide();
   });
 }
+
+// Handle contact link separately
+const contactLink = document.getElementById("contact-link");
+contactLink.addEventListener("click", (event) => {
+  // Close the expanded navbar
+  navCollapse.hide();
+});
 
 // Populate About photo-gallery ===================================================================
 const photos = [
   // Photos to add, ideally would replace with file-system query
-  "photo-01.jpg",
-  "photo-02.jpg",
-  "photo-03.jpg",
-  "photo-04.jpg",
-  "photo-05.jpg",
-  "photo-06.jpg",
-  "photo-07.jpg",
-  "photo-08.jpg",
-  "photo-09.jpg",
-  "photo-10.jpg",
-  "photo-11.jpg",
-  "photo-12.jpg",
-  "photo-13.jpg",
-  "photo-14.jpg",
-  "photo-15.jpg",
-  "photo-16.jpg",
-  "photo-17.jpg",
-  "photo-18.jpg",
-  "photo-19.jpg",
-  "photo-20.jpg",
-  "photo-21.jpg",
-  "photo-22.jpg",
-  "photo-23.jpg",
-  "photo-24.jpg",
-  "photo-25.jpg",
-  "photo-26.jpg",
-  "photo-27.jpg",
-  "photo-28.jpg",
-  "photo-29.jpg",
-  "photo-30.jpg",
+  { file: "photo-01.jpg", alt: "tayte driving electric semi" },
+  { file: "photo-02.jpg", alt: "tayte and rachel in neu-ulm" },
+  { file: "photo-03.jpg", alt: "tayte and quinn photography in park" },
+  { file: "photo-04.jpg", alt: "stuttgart schlossplatz fountain" },
+  { file: "photo-05.jpg", alt: "tayte and quinn in park" },
+  { file: "photo-06.jpg", alt: "giant rubber duck in river" },
+  { file: "photo-07.jpg", alt: "bird building nest" },
+  { file: "photo-08.jpg", alt: "vatican swiss guard" },
+  { file: "photo-09.jpg", alt: "tayte and quinn at rhine falls" },
+  { file: "photo-10.jpg", alt: "quinn on bike through fall leaves" },
+  { file: "photo-11.jpg", alt: "rachel and quinn on bridge in amsterdam" },
+  { file: "photo-12.jpg", alt: "quinn closeup" },
+  { file: "photo-13.jpg", alt: "tayte and quinn trevi fountain" },
+  { file: "photo-14.jpg", alt: "sorrento main street" },
+  { file: "photo-15.jpg", alt: 'quinn on swing with "Little Dude" sweater' },
+  {
+    file: "photo-16.jpg",
+    alt: "tayte and quinn in front of fountain in berlin",
+  },
+  { file: "photo-17.jpg", alt: "tayte and quinn on beach" },
+  { file: "photo-18.jpg", alt: "inflatable multi-color eyes" },
+  { file: "photo-19.jpg", alt: "three different color italian cars" },
+  { file: "photo-20.jpg", alt: "tayte and quinn with sunglasses" },
+  { file: "photo-21.jpg", alt: "quinn in giant clogs" },
+  { file: "photo-22.jpg", alt: "plants on balcony in strassbourg alley" },
+  { file: "photo-23.jpg", alt: "tayte at roman colosseum" },
+  { file: "photo-24.jpg", alt: "quinn in sunglasses" },
+  {
+    file: "photo-25.jpg",
+    alt: "tayte rachel and quinn in front of cologne cathedral",
+  },
+  { file: "photo-26.jpg", alt: "closeup of bees on flowers" },
+  { file: "photo-27.jpg", alt: "amsterdam canals bridges and boats" },
+  {
+    file: "photo-28.jpg",
+    alt: "quinn looking at a painting of birds at the louvre",
+  },
+  { file: "photo-29.jpg", alt: "quinn taking photos" },
+  { file: "photo-30.jpg", alt: "closeup of a giraffe" },
 ];
 
 const gallery = document.getElementById("gallery");
@@ -62,7 +91,12 @@ for (let photo of photos) {
   const div = `
   <div class="col-12 col-md-6 col-lg-4">
     <div class="ratio ratio-1x1">
-      <img src="images/gallery/${photo}" class="img-fluid object-fit-cover rounded" />
+      <img 
+        src="images/gallery/${photo.file}"
+        class="img-fluid object-fit-cover rounded"
+        alt="${photo.alt}"
+        loading="lazy"
+      />
     </div>
   </div>`;
 
@@ -107,7 +141,7 @@ form.addEventListener("submit", (event) => {
 const educationData = [
   {
     org: "Portland State University",
-    logo: "images/logos/psu.png",
+    logo: { file: "images/logos/psu.png", alt: "psu logo" },
     link: { url: "https://www.pdx.edu/", text: "pdx.edu" },
     location: "Portland, OR, USA",
     major: "Master's Computer Science",
@@ -116,7 +150,7 @@ const educationData = [
   },
   {
     org: "Portland State University",
-    logo: "images/logos/psu.png",
+    logo: { file: "images/logos/psu.png", alt: "psu logo" },
     link: { url: "https://www.pdx.edu/", text: "pdx.edu" },
     location: "Portland, OR, USA",
     major: "Post-Bac Computer Science",
@@ -125,7 +159,7 @@ const educationData = [
   },
   {
     org: "Oregon Institute of Technology",
-    logo: "images/logos/oit.png",
+    logo: { file: "images/logos/oit.png", alt: "oit logo" },
     link: { url: "https://www.pdx.edu/", text: "pdx.edu" },
     location: "Klamath Falls, OR, USA",
     major: "Bachelor's Mechanical Engineering",
@@ -142,8 +176,10 @@ for (let entry of educationData) {
       <div class="row">
         <div class="col-lg-3 col-sm-6">
           <image
-            src="${entry.logo}"
+            src="${entry.logo.file}"
             class="img-fluid object-fit-cover"
+            alt="${entry.logo.alt}"
+            loading="lazy"
           />
         </div>
       </div>
@@ -154,7 +190,7 @@ for (let entry of educationData) {
       <div class="small text-muted">${entry.location}</div>
       <div class="small text-muted mb-2">
         website: 
-        <a href="${entry.link.url}" target="_blank">${entry.link.text}</a>
+        <a href="${entry.link.url}" title="${entry.link.text}" target="_blank">${entry.link.text}</a>
       </div>
       <div><strong>${entry.major}</strong></div>
       <div class="small">Status: ${entry.status}</div>
@@ -170,7 +206,7 @@ const accreditationData = [
     cert: "Profesional Engineer, Mechanical Engineering",
     org: "Oregon State Board of Examiners for Engineering & Land Surveying",
     location: "Oregon, USA",
-    logo: "images/logos/osbeels.png",
+    logo: { file: "images/logos/osbeels.png", alt: "osbeels logo" },
     link: {
       url: "https://www.oregon.gov/osbeels/",
       text: "oregon.gov/osbeels/",
@@ -188,10 +224,12 @@ for (let entry of accreditationData) {
   <div class="card mb-3">
     <div class="card-body">
       <div class="row">
-        <div class="col-3">
+        <div class="col-md-3 col-5">
           <image
-            src="${entry.logo}"
+            src="${entry.logo.file}"
             class="img-fluid object-fit-cover"
+            alt="${entry.logo.alt}"
+            loading="lazy"
           />
         </div>
       </div>
@@ -202,7 +240,13 @@ for (let entry of accreditationData) {
       <div class="small text-muted">${entry.location}</div>
       <div class="small text-muted mb-2">
         website: 
-        <a href="${entry.link.url}" target="_blank">${entry.link.text}</a>
+        <a
+          href="${entry.link.url}"
+          title="${entry.link.text}"
+          target="_blank"
+        >
+          ${entry.link.text}
+        </a>
       </div>
       <div><strong>${entry.cert}</strong></div>
       <div class="small">Status: ${entry.status}</div>
@@ -217,7 +261,7 @@ const workExperienceData = [
   {
     org: "Daimler Truck AG",
     location: "Stuttgart, Baden-Württemberg, DE",
-    logo: "images/logos/dtag.png",
+    logo: { file: "images/logos/dtag.png", alt: "daimler truck a g logo" },
     link: {
       url: "https://www.daimlertruck.com/en",
       text: "daimlertruck.com",
@@ -230,7 +274,10 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/logos/dtna.png",
+    logo: {
+      file: "images/logos/dtna.png",
+      alt: "daimler truck north america logo",
+    },
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -243,7 +290,10 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/logos/dtna.png",
+    logo: {
+      file: "images/logos/dtna.png",
+      alt: "daimler truck north america logo",
+    },
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -256,7 +306,10 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/logos/dtna.png",
+    logo: {
+      file: "images/logos/dtna.png",
+      alt: "daimler truck north america logo",
+    },
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -269,7 +322,10 @@ const workExperienceData = [
   {
     org: "Daimler Truck North America LLC",
     location: "Portland, OR, USA",
-    logo: "images/logos/dtna.png",
+    logo: {
+      file: "images/logos/dtna.png",
+      alt: "daimler truck north america logo",
+    },
     link: {
       url: "https://northamerica.daimlertruck.com/",
       text: "northamerica.daimlertruck.com",
@@ -282,7 +338,7 @@ const workExperienceData = [
   {
     org: "Gigaphoton USA Inc.",
     location: "Beaverton, OR, USA",
-    logo: "images/logos/gigaphoton.jpg",
+    logo: { file: "images/logos/gigaphoton.jpg", alt: "gigaphoton u s a logo" },
     link: {
       url: "https://www.gigaphoton.com/",
       text: "gigaphoton.com",
@@ -302,8 +358,10 @@ for (let entry of workExperienceData) {
       <div class="row align-items-center mb-2">
         <div class="col-lg-3 col-sm-6">
           <image
-            src="${entry.logo}"
+            src="${entry.logo.file}"
             class="img-fluid object-fit-cover"
+            alt="${entry.logo.alt}"
+            loading="lazy"
           />
         </div>
         <div class="col-lg-4 col-sm-6">
@@ -313,7 +371,7 @@ for (let entry of workExperienceData) {
           <div class="small text-muted">${entry.location}</div>
           <div class="small text-muted mb-2">
             website: 
-            <a href="${entry.link.url}" target="_blank">${entry.link.text}</a>
+            <a href="${entry.link.url}" title="${entry.link.text}" target="_blank">${entry.link.text}</a>
           </div>
           <div><strong>${entry.title}</strong></div>
           <div class="small text-muted mb-2">
@@ -332,19 +390,19 @@ for (let entry of workExperienceData) {
 const languagesData = [
   {
     language: "English",
-    icon: "images/icons/usa.png",
+    icon: { file: "images/icons/usa.png", alt: "united states flag" },
     level: "C2",
     proficiency: "Native Speaker",
   },
   {
     language: "German",
-    icon: "images/icons/germany.png",
+    icon: { file: "images/icons/germany.png", alt: "german flag" },
     level: "A2-B1",
     proficiency: "Intermediate",
   },
   {
     language: "Spanish",
-    icon: "images/icons/spain.png",
+    icon: { file: "images/icons/spain.png", alt: "spanish flag" },
     level: "A1",
     proficiency: "Basic",
   },
@@ -357,8 +415,10 @@ for (let entry of languagesData) {
     <div class="card">
       <div class="card-body d-flex align-items-center">
         <image
-          src="${entry.icon}"
+          src="${entry.icon.file}"
           class="img-fluid object-fit-cover"
+          alt="${entry.icon.alt}"
+          loading="lazy"
         />
 
         <div class="ms-3">

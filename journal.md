@@ -105,10 +105,53 @@ I took the opportunity in this update to rearrange the sections in my html. In e
 
 I also updated the contents of my About section wording; I just didn't like the wording and wanted some small tweaks.
 
+### Accessiblity, Code Review, and Testing
+
+> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+
+#### Accessibility and Best-Practices
+
+In this update I jointly used WAVE, Lighthouse, and manually reviewed through my code to identify where accessibility, or generally helpful/necessary tags may be missing. Below is a summary of some of the items that I uncovered:
+
+- links missing `title` attribute. This attribute helps provide contextual information like a short description when the mouse hovers over it
+- missing `alt` descriptions for images
+- lack of use of "lazy" loading for images and iframe references
+- missing `meta` info in header about website (for search engine optimization)
+- missing link references in `navbar-brand`, recommended for search engine optimization
+
+#### Code Review
+
+I found several syntactic and malformed items that benefited from being updated:
+
+- duplicate `education-contents` ID, removed
+- duplicate `collapsed` class definition in first accordion
+
+#### Testing
+
+I also tested the application across multiple aspect ratios via the developer tools, as well as on separate devices; my laptop and personal phone. I uncovered several issues when testing against different environments.
+
+- I found that the nav-bar automatically collapsed and provided a drop-down menu as expected on smaller screens. However, when clicking a link, the menu did not close, obscuring the contents of the page. It seems that by default Bootstrap doesn't support this as its assumed the links lead to another page (which is a fair assumption). In my case with one page, I had to control this directly via Javascript. To do so I had to get the bootstrap collapse entity [https://getbootstrap.com/docs/5.0/components/collapse/](https://getbootstrap.com/docs/5.0/components/collapse/) and call its `.hide()` method. I encountered some minor issues with attempting to grab this entity before it was initialized. The `getOnCreateInstance()` method helped with this as it supports the fetching of it only after the object is initialized. However, it had a secondary side effect of setting the collapsed state to expanded immediately on load; the menu started expanded. After digging, I found that it is also possible to pass initial states to the `getOnCreateInstance()` [https://stackoverflow.com/questions/75949166/why-does-bootstrap-5s-getorcreateinstance-method-for-collapsibles-immediately](https://stackoverflow.com/questions/75949166/why-does-bootstrap-5s-getorcreateinstance-method-for-collapsibles-immediately).
+- I also found that when on smaller screens the right and left margins were too wide. What looked good for a larger screen ate up a lot of screen real-estate on a small one. I update the `mx` bootstrap classes with explicit screen sizes in the outermost page div; e.g. `mx-md-5`.
+- I found that in the contact form, it allowed the user to submit data without actualy entering an email or message. It turns out this is super easy to enforce; it can be enforced within html directly via the `required` attribute [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required).
+- Issue with missing favicon. After further research it seems that it is just a general issue with a tab icon not being provided. I included a "W" image from [https://www.flaticon.com/](https://www.flaticon.com/) and the warning disappeared.
+- I have many warnings for missing code return types, unsupported features, etc. After researching I found that these are a combination of issues with Firefox supported-features and depricated features stemming from the inclusion of the Youtube video in my Projects section [https://stackoverflow.com/questions/61624146/feature-policy-skipping-unsupported-feature-name-picture-in-picture-autopl](https://stackoverflow.com/questions/61624146/feature-policy-skipping-unsupported-feature-name-picture-in-picture-autopl). Generally, from what I could find, it seems that this stems from "max complexity" features from Youtube and errors from te inclusion of their minified scripts. My understanding is that these warnings depend on the specific browser, but generally the definition as supplied and included by Youtube (I was provided the `iframe` contents directly from Youtube for my video) should not be changed; these warnings can be ignored.
+- "Try it out" link in the Sorting-Algorithm, Projects page looked better as a button.
+- Expanded
+
 ## References
 
 ### Included Images
 
-- “iPhone‑Wallpaper 8Ogfqvw15Rg,” Unsplash, Accessed: Nov. 9, 2025. [Online]. Available: https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg
-- “LinkedIn free icon,” Flaticon, Accessed: Nov. 10, 2025. [Online]. Available: https://www.flaticon.com/free-icon/linkedin_3536505?term=linkedin&page=1&position=1&origin=search&related_id=3536505
-- “GitHub free icon,” Flaticon, Accessed: Nov. 10, 2025. [Online]. Available: https://www.flaticon.com/free-icon/github_3291695
+- Daimler Truck AG, “Daimler Truck AG,” [Online]. Available: [https://www.daimlertruck.com/en](https://www.daimlertruck.com/en). Accessed: Nov. 22, 2025.
+- Daimler Truck North America LLC, “Daimler Truck North America,” [Online]. Available: [https://northamerica.daimlertruck.com/](https://northamerica.daimlertruck.com/). Accessed: Nov. 22, 2025.
+- Flaticon, “GitHub free icon,” [Online]. Available: [https://www.flaticon.com/free-icon/github_3291695](https://www.flaticon.com/free-icon/github_3291695). Accessed: Nov. 10, 2025.
+- Flaticon, “LinkedIn free icon,” [Online]. Available: [https://www.flaticon.com/free-icon/linkedin_3536505?term=linkedin&page=1&position=1&origin=search&related_id=3536505](https://www.flaticon.com/free-icon/linkedin_3536505?term=linkedin&page=1&position=1&origin=search&related_id=3536505). Accessed: Nov. 10, 2025.
+- Flaticon, “Search results for ‘German flag’,” [Online]. Available: [https://www.flaticon.com/search?word=german%20flag](https://www.flaticon.com/search?word=german%20flag). Accessed: Nov. 22, 2025.
+- Flaticon, “Search results for ‘Spain flag’,” [Online]. Available: [https://www.flaticon.com/search?word=spain%20flag](https://www.flaticon.com/search?word=spain%20flag). Accessed: Nov. 22, 2025.
+- Flaticon, “Search results for ‘USA flag’,” [Online]. Available: [https://www.flaticon.com/search?word=usa%20flag](https://www.flaticon.com/search?word=usa%20flag). Accessed: Nov. 22, 2025.
+- Flaticon, “Search results for ‘w’,” [Online]. Available: [https://www.flaticon.com/search?word=w](https://www.flaticon.com/search?word=w). Accessed: Nov. 22, 2025.
+- Gigaphoton USA Inc., “Gigaphoton USA,” [Online]. Available: [https://www.gigaphoton.com/](https://www.gigaphoton.com/). Accessed: Nov. 22, 2025.
+- Oregon Institute of Technology, “Oregon Institute of Technology,” [Online]. Available: [https://www.oit.edu/](https://www.oit.edu/). Accessed: Nov. 22, 2025.
+- Oregon State Board of Examiners for Engineering & Land Surveying (OSBEELS), “OSBEELS,” [Online]. Available: [https://www.oregon.gov/osbeels/](https://www.oregon.gov/osbeels/). Accessed: Nov. 22, 2025.
+- Portland State University, “Portland State University,” [Online]. Available: [https://www.pdx.edu/](https://www.pdx.edu/). Accessed: Nov. 22, 2025.
+- “iPhone‑Wallpaper 8Ogfqvw15Rg,” Unsplash, [Online]. Available: [https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg](https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg). Accessed: Nov. 9, 2025.
