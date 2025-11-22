@@ -137,7 +137,7 @@ const educationData = [
 const education = document.getElementById("education-contents");
 for (let entry of educationData) {
   const div = `
-  <div class="card my-3">
+  <div class="card mb-3">
     <div class="card-body">
       <div class="row">
         <div class="col-lg-3 col-sm-6">
@@ -185,7 +185,7 @@ const accreditationData = [
 const accreditations = document.getElementById("accreditations-contents");
 for (let entry of accreditationData) {
   const div = `
-  <div class="card my-3">
+  <div class="card mb-3">
     <div class="card-body">
       <div class="row">
         <div class="col-3">
@@ -297,7 +297,7 @@ const workExperienceData = [
 const workExperience = document.getElementById("work-experience-contents");
 for (let entry of workExperienceData) {
   const div = `
-  <div class="card my-3">
+  <div class="card mb-3">
     <div class="card-body">
       <div class="row align-items-center mb-2">
         <div class="col-lg-3 col-sm-6">
@@ -353,7 +353,7 @@ const languagesData = [
 const languages = document.getElementById("language-contents");
 for (let entry of languagesData) {
   const div = `
-  <div class="col-12 col-md-6 col-lg-4 my-3">
+  <div class="col-12 col-md-6 col-lg-4 mb-3">
     <div class="card">
       <div class="card-body d-flex align-items-center">
         <image
@@ -395,7 +395,7 @@ const technologies = document.getElementById("software-technologies-contents");
 for (let entry of technologiesData) {
   const div = `
   <div class="col-12 col-md-6 col-lg-3 my-1">
-    <div class="bg-primary text-white text-center rounded p-3">
+    <div class="bg-skill text-white text-center rounded p-3">
       ${entry}
     </div>
   </div>`;

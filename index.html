@@ -66,48 +66,278 @@
     <main class="flex-fill mx-5 my-3">
       <section id="about" class="d-block">
         <!-- https://getbootstrap.com/docs/5.0/components/card/ -->
-        <div class="card my-3">
-          <div class="card-body">
+        <div class="card bg-translucent my-3">
+          <div class="card-header bg-title py-3">
             <h3>About Me</h3>
           </div>
-        </div>
 
-        <div class="card my-3">
-          <div class="card-body">
-            <p class="card-text">
-              My name is <strong>Tayte Waterman</strong>. I'm an engineer,
-              developer, dad, and restless nerd at heart. I love to learn new
-              things, explore new places and perspectives, and share time with
-              friends and family. A Pacific-Northwest Native, I currently live
-              abroad with my wife and young son in Stuttgart, Germany where we
-              enjoy living and working in a new culture.
-            </p>
-            <p class="card-text">
-              In my spare time I enjoy tinkering with software and electronics
-              projects, kicking back with a good book or videogame, amateur
-              photography, and travelling with my family to experience new
-              places and things to eat.
-            </p>
-            <p class="card-text">
-              Professionally, I have worked for over a decade in the
-              <strong>automotive industry</strong> working on embedded
-              <strong>Mechatronics</strong> systems for commercial vehicles. I
-              enjoy working in the intersection of physical systems and software
-              controls; where software IT technologies intersect with real-time,
-              critical controls. I currently work as a
-              <strong>Software Architect</strong> at Daimler Truck AG, helping
-              define our next generation of software-oriented systems. I am
-              passionate about continual development, both personally, for our
-              organization and industry, and in supporting peers. I believe an
-              engineers role is a hybrid of both technical discipline and
-              creativity. I love learning from new challenges and the diverse
-              perspectives of my colleauges.
-            </p>
+          <div class="card-body my-2">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  My name is <strong>Tayte Waterman</strong>. I'm an engineer,
+                  developer, dad, and restless nerd at heart. I love to learn
+                  new things, explore new places and perspectives, and share
+                  time with friends and family. A Pacific-Northwest native, I
+                  currently live abroad with my wife and young son in Stuttgart,
+                  Germany working for <strong>Daimler Truck AG </strong>as a
+                  <strong>Software Architect</strong> for commercial vehicle
+                  electrical systems. In parallel I am currently enrolled at
+                  <strong>Portland State University</strong>, pursuing a
+                  <strong>Master's in Computer Science</strong>.
+                </p>
+                <p class="card-text">
+                  In my spare time I enjoy tinkering with software and
+                  electronics projects, kicking back with a good book or
+                  videogame, amateur photography, and travelling with my family
+                  to experience new places and things to eat.
+                </p>
+                <p class="card-text">
+                  Professionally, I have worked for over a decade in the
+                  automotive industry working on embedded Mechatronics systems
+                  for commercial vehicles. I enjoy working in the intersection
+                  of physical systems and software controls; where software IT
+                  technologies intersect with real-time, critical controls. I am
+                  passionate about continual development, both personally, for
+                  our organization and industry, and in supporting peers. I
+                  believe an engineers role is a hybrid of both technical
+                  discipline and creativity. I love learning from new challenges
+                  and the diverse perspectives of my colleauges.
+                </p>
+              </div>
+            </div>
+
+            <div class="container mt-3">
+              <div id="gallery" class="row g-3">
+                <!-- Photos: populated by Javascript -->
+              </div>
+            </div>
           </div>
         </div>
-        <div class="container">
-          <div id="gallery" class="row g-3">
-            <!-- Photos: populated by Javascript -->
+      </section>
+
+      <section id="projects" class="d-none">
+        <div class="card bg-translucent my-3">
+          <div class="card-header bg-title py-3">
+            <h3>Projects</h3>
+          </div>
+
+          <div class="card-body my-2">
+            <div class="row justify-content-end">
+              <div class="col-lg-10 col-12">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <strong>8-Channel MIDI Stepper-Motor Player</strong>
+                    </h5>
+
+                    <div class="row mb-3">
+                      <div class="col-lg-8 col-12">
+                        <div class="ratio ratio-16x9">
+                          <iframe
+                            class="rounded"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/e9bMyeX0_78?si=hAHnilJ12JS-U1JA"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h5>About</h5>
+                    <p>
+                      In this project is defined joint Raspberry Pi and Arduino
+                      code used to play MIDI-format music files over 8 stepper
+                      motors. The Raspberry Pi code reads MIDI-format music
+                      files and translates them into note commands split across
+                      8-channels. The 8-channels each map to a stepper motor,
+                      which "plays" the corresponding note via the frequency
+                      used to drive it. Two Arduinos are used, controlling
+                      4-steppers each. This project explores a combined
+                      micro-processor and micro-controller architecture,
+                      unifying the needs of high-precision real-time controls,
+                      and higher abstraction file-system access and processing.
+                    </p>
+
+                    <h5>Images</h5>
+                    <div class="row g-3 mb-3">
+                      <div class="col-lg-6 col-12">
+                        <img
+                          src="images/projects/steppers.jpg"
+                          class="img-fluid object-fit-cover rounded"
+                        />
+                      </div>
+                      <div class="col-lg-6 col-12">
+                        <img
+                          src="images/projects/diagram.png"
+                          class="img-fluid object-fit-cover rounded"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="row justify-content-end">
+                      <div class="col-auto">Tayte Waterman | Dec 2024</div>
+                      <div class="col-auto">
+                        <a
+                          class="text-body-secondary"
+                          href="https://github.com/TayticusPrime/RPi-Steppers"
+                          target="_blank"
+                          aria-label="r pi steppers repository"
+                        >
+                          <img
+                            src="images/icons/github.png"
+                            width="24"
+                            height="24"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-start">
+              <div class="col-lg-10 col-12">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <strong>OpenGL Demo</strong>
+                    </h5>
+
+                    <div class="row mb-3">
+                      <div class="col-lg-8 col-12">
+                        <div class="ratio ratio-16x9">
+                          <img
+                            src="images/projects/birds.jpg"
+                            class="img-fluid object-fit-cover rounded"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <h5>About</h5>
+                    <p>
+                      In this project I implemented a 3D scene via the C++
+                      OpenGL library for my CS547, Computer Graphics final at
+                      PSU. The implemented scene is an outdoor, forest "park"
+                      containing several features used to demonstrate different
+                      OpenGL features and 3D graphics techniques. In example,
+                      there is a central mountain with various levels of
+                      proceduraly generated face-detail, animated fyling birds,
+                      parametric objects which can vary between instances, and
+                      an ability to switch views and change environmental
+                      lighting.
+                    </p>
+
+                    <h5>Images</h5>
+                    <div class="row justify-content-center g-3">
+                      <div class="col-12">
+                        <img
+                          src="images/projects/mountain.jpg"
+                          class="img-fluid object-fit-cover rounded"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <img
+                          src="images/projects/sky.jpg"
+                          class="img-fluid object-fit-cover rounded"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="row justify-content-end">
+                      <div class="col-auto">Tayte Waterman | Nov 2023</div>
+                      <div class="col-auto">
+                        <a
+                          class="text-body-secondary"
+                          href="https://github.com/watermanpdx/CS547-Final-Project"
+                          target="_blank"
+                          aria-label="open gl demo repository"
+                        >
+                          <img
+                            src="images/icons/github.png"
+                            width="24"
+                            height="24"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-end">
+              <div class="col-lg-10 col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <strong>Sorting Algorithm Visualization</strong>
+                    </h5>
+
+                    <div class="row mb-3">
+                      <div class="col-lg-8 col-12">
+                        <div class="ratio ratio-16x9">
+                          <img
+                            src="images/projects/sorting.jpg"
+                            class="img-fluid object-fit-cover rounded"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <h5>About</h5>
+                    <p>
+                      A web-based visualization of various sorting algorithms
+                      implemented in JavaScript and HTML/CSS. The project
+                      includes animations that demonstrate how different sorting
+                      algorithms work, such as Bubble Sort, Quick Sort, Merge
+                      Sort, and Insertion Sort. Users can select different
+                      algorithms to see step-by-step how they sort an array of
+                      numbers, providing an educational tool for understanding
+                      sorting techniques.
+                    </p>
+                    <a
+                      id="link-sorting-webpage"
+                      href="https://tayticusprime.github.io/Sorting-Algorithms/"
+                      target="_blank"
+                    >
+                      <h5>Try it out!</h5>
+                    </a>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="row justify-content-end">
+                      <div class="col-auto">Tayte Waterman | Dec 2022</div>
+                      <div class="col-auto">
+                        <a
+                          class="text-body-secondary"
+                          href="https://github.com/TayticusPrime/Sorting-Algorithms"
+                          target="_blank"
+                          aria-label="sorting algorithms repository"
+                        >
+                          <img
+                            src="images/icons/github.png"
+                            width="24"
+                            height="24"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -117,7 +347,7 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="education">
               <button
-                class="accordion-button collapsed collapsed"
+                class="accordion-button collapsed collapsed bg-title"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapse-education"
@@ -134,7 +364,7 @@
               data-bs-parent="#education-accordion"
             >
               <div id="education-contents" class="accordion-body">
-                <div class="row">
+                <div id="education-contents" class="my-2">
                   <!-- Education: Populated by Javascript -->
                 </div>
               </div>
@@ -146,7 +376,7 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="accreditations">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed bg-title"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapse-accreditations"
@@ -162,8 +392,8 @@
               aria-labelledby="accreditations"
               data-bs-parent="#accreditations-accordion"
             >
-              <div id="accreditations-contents" class="accordion-body">
-                <div class="row">
+              <div class="accordion-body">
+                <div id="accreditations-contents" class="my-2">
                   <!-- Accreditations: Populated by Javascript -->
                 </div>
               </div>
@@ -175,7 +405,7 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="work-experience">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed bg-title"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapse-work-experience"
@@ -191,8 +421,8 @@
               aria-labelledby="work-experience"
               data-bs-parent="#work-experience-accordion"
             >
-              <div id="work-experience-contents" class="accordion-body">
-                <div class="row">
+              <div class="accordion-body">
+                <div id="work-experience-contents" class="my-2">
                   <!-- Work experience: Populated by Javascript -->
                 </div>
               </div>
@@ -204,7 +434,7 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="skills">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button collapsed bg-title"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapse-skills"
@@ -239,228 +469,6 @@
                     <div id="software-technologies-contents" class="row">
                       <!-- Software technologies: populated by Javascript -->
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="d-none">
-        <div class="card my-3">
-          <div class="card-body">
-            <h3>Projects</h3>
-          </div>
-        </div>
-
-        <div class="row justify-content-end">
-          <div class="col-lg-10 col-12">
-            <div class="card my-">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <strong>8-Channel MIDI Stepper-Motor Player</strong>
-                </h5>
-
-                <div class="row mb-3">
-                  <div class="col-lg-8 col-12">
-                    <div class="ratio ratio-16x9">
-                      <iframe
-                        class="rounded"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/e9bMyeX0_78?si=hAHnilJ12JS-U1JA"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-
-                <h5>About</h5>
-                <p>
-                  In this project is defined joint Raspberry Pi and Arduino code
-                  used to play MIDI-format music files over 8 stepper motors.
-                  The Raspberry Pi code reads MIDI-format music files and
-                  translates them into note commands split across 8-channels.
-                  The 8-channels each map to a stepper motor, which "plays" the
-                  corresponding note via the frequency used to drive it. Two
-                  Arduinos are used, controlling 4-steppers each. This project
-                  explores a combined micro-processor and micro-controller
-                  architecture, unifying the needs of high-precision real-time
-                  controls, and higher abstraction file-system access and
-                  processing.
-                </p>
-
-                <h5>Images</h5>
-                <div class="row g-3 mb-3">
-                  <div class="col-lg-6 col-12">
-                    <img
-                      src="images/projects/steppers.jpg"
-                      class="img-fluid object-fit-cover rounded"
-                    />
-                  </div>
-                  <div class="col-lg-6 col-12">
-                    <img
-                      src="images/projects/diagram.png"
-                      class="img-fluid object-fit-cover rounded"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="row justify-content-end">
-                  <div class="col-auto">Tayte Waterman | Dec 2024</div>
-                  <div class="col-auto">
-                    <a
-                      class="text-body-secondary"
-                      href="https://github.com/TayticusPrime/RPi-Steppers"
-                      target="_blank"
-                      aria-label="r pi steppers repository"
-                    >
-                      <img
-                        src="images/icons/github.png"
-                        width="24"
-                        height="24"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-start">
-          <div class="col-lg-10 col-12">
-            <div class="card my-3">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <strong>OpenGL Demo</strong>
-                </h5>
-
-                <div class="row mb-3">
-                  <div class="col-lg-8 col-12">
-                    <div class="ratio ratio-16x9">
-                      <img
-                        src="images/projects/birds.jpg"
-                        class="img-fluid object-fit-cover rounded"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <h5>About</h5>
-                <p>
-                  In this project I implemented a 3D scene via the C++ OpenGL
-                  library for my CS547, Computer Graphics final at PSU. The
-                  implemented scene is an outdoor, forest "park" containing
-                  several features used to demonstrate different OpenGL features
-                  and 3D graphics techniques. In example, there is a central
-                  mountain with various levels of proceduraly generated
-                  face-detail, animated fyling birds, parametric objects which
-                  can vary between instances, and an ability to switch views and
-                  change environmental lighting.
-                </p>
-
-                <h5>Images</h5>
-                <div class="row justify-content-center g-3">
-                  <div class="col-12">
-                    <img
-                      src="images/projects/mountain.jpg"
-                      class="img-fluid object-fit-cover rounded"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <img
-                      src="images/projects/sky.jpg"
-                      class="img-fluid object-fit-cover rounded"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="row justify-content-end">
-                  <div class="col-auto">Tayte Waterman | Nov 2023</div>
-                  <div class="col-auto">
-                    <a
-                      class="text-body-secondary"
-                      href="https://github.com/watermanpdx/CS547-Final-Project"
-                      target="_blank"
-                      aria-label="open gl demo repository"
-                    >
-                      <img
-                        src="images/icons/github.png"
-                        width="24"
-                        height="24"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-end">
-          <div class="col-lg-10 col-12">
-            <div class="card my-3">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <strong>Sorting Algorithm Visualization</strong>
-                </h5>
-
-                <div class="row mb-3">
-                  <div class="col-lg-8 col-12">
-                    <div class="ratio ratio-16x9">
-                      <img
-                        src="images/projects/sorting.jpg"
-                        class="img-fluid object-fit-cover rounded"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <h5>About</h5>
-                <p>
-                  A web-based visualization of various sorting algorithms
-                  implemented in JavaScript and HTML/CSS. The project includes
-                  animations that demonstrate how different sorting algorithms
-                  work, such as Bubble Sort, Quick Sort, Merge Sort, and
-                  Insertion Sort. Users can select different algorithms to see
-                  step-by-step how they sort an array of numbers, providing an
-                  educational tool for understanding sorting techniques.
-                </p>
-                <a
-                  id="link-sorting-webpage"
-                  href="https://tayticusprime.github.io/Sorting-Algorithms/"
-                  target="_blank"
-                >
-                  <h5>Try it out!</h5>
-                </a>
-              </div>
-
-              <div class="card-footer">
-                <div class="row justify-content-end">
-                  <div class="col-auto">Tayte Waterman | Dec 2022</div>
-                  <div class="col-auto">
-                    <a
-                      class="text-body-secondary"
-                      href="https://github.com/TayticusPrime/Sorting-Algorithms"
-                      target="_blank"
-                      aria-label="sorting algorithms repository"
-                    >
-                      <img
-                        src="images/icons/github.png"
-                        width="24"
-                        height="24"
-                      />
-                    </a>
                   </div>
                 </div>
               </div>

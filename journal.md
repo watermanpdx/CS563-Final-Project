@@ -91,6 +91,20 @@ I also updated my project layouts. I moved the date and link for each into a foo
 
 I also chose to add a footer to each of my project cards with a GitHub icon linking to my source code. I may revisit this. I like how it looks visually, but I'm also concerned that its not apparent that the icons themselves are links. Normally, there is so much on webpages in terms of icons and links I personally tend to ignore such icons; yet they seem to be common. I'd be curious from a design (not technical-design) whether there are better, or more standard practices.
 
+### Asthetics and Content Review
+
+> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+
+In this update, my goal is to finalize the website; final touches and checks for accessibility, errors, responsiveness etc.
+
+One immediate, minor visual item I changed was I changed the color of my "header cards" titling subsections and the coloring of the "skill" blocks in my Experience section. As previously described, I used bootstrap cards for this, but not really as cards; this was more a custom use-case. As such, I also needed to add my own color styling in css to control these elements. I created my own classes `bg-title` and `bg-skill` to define these custom background colors. I had to use the `!important` modifier to ensure they overrode the Bootstrap defaults. I wanted to match the title cards colors to the nav banner. I wasn't able to get quite the same shade/color I wanted via the provided Bootstrap classes/features, but I wanted it to roughly match. I used the inspector to extract the banner rg values and then manually adjusted them (lightened) in css until I got what I wanted.
+
+I also decided to move my non-accordion sections into cards with headers, shifting my "cards as headers" to headers in cards. I also added a semi-translucent background to help visually hold the cohesiveness of a section and make it more similar to the accordion layout. To achieve the translucency I used the `rgba()` utility in css to set a white background but adjust the alpha value to achieve the desired transparency level. One challenge I ran into however was the application of consistent properties. I attempted in my css to have one class defined for key items, such as the background translucency via `bg-translucent`. This generally worked except for the accordions. I was unable to find a single spot where this class could be applied to get the desired behavior. Likewise, removing the background color from my existing css overrides to the accordion somehow also made the border reappear (I had set it to transparent here as well)! I struggle a bit with understanding how properties flow through this construction and where they are most appropriately defined... In the end I decided that I was still able to unify most content into a single class, it was just the accordion css definitions which required a redundant `rgba()` definition, and I would leave it. I achieved the desired behavior, but with more time/review I feel this could be cleaned up a bit.
+
+I took the opportunity in this update to rearrange the sections in my html. In example, I initially had the Experience section displayed before the Projects section. I swapped this in a previous update in the nav-bar, but not in the html. This doesn't impact the behavior of the site, but made the hmtl layout not reflect the general structure of the website; from the developer perspective it made the html a little more difficult to scan through/review.
+
+I also updated the contents of my About section wording; I just didn't like the wording and wanted some small tweaks.
+
 ## References
 
 ### Included Images

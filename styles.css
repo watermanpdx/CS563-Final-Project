@@ -20,8 +20,25 @@ body {
   cursor: pointer;
 }
 
+/* Accordion transparency */
 .accordion-item,
 .accordion-collapse,
 .accordion-body {
-  background-color: transparent !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: transparent !important;
+}
+
+/* Custom card/accordion colorings */
+.bg-title {
+  background-color: #42454a !important;
+  color: white !important;
+}
+
+.bg-skill {
+  background-color: #4a9efe !important;
+  color: white !important;
+}
+
+.bg-translucent {
+  background-color: rgba(255, 255, 255, 0.3) !important;
 }
