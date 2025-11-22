@@ -107,7 +107,7 @@ I also updated the contents of my About section wording; I just didn't like the 
 
 ### Accessiblity, Code Review, and Testing
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [627bd8e](https://github.com/watermanpdx/CS563-Final-Project/commit/627bd8e)
 
 #### Accessibility and Best-Practices
 
