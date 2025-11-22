@@ -93,7 +93,7 @@ I also chose to add a footer to each of my project cards with a GitHub icon link
 
 ### Asthetics and Content Review
 
-> Commit capturing this state: [](https://github.com/watermanpdx/CS563-Final-Project/commit/)
+> Commit capturing this state: [e04b28b](https://github.com/watermanpdx/CS563-Final-Project/commit/e04b28b)
 
 In this update, my goal is to finalize the website; final touches and checks for accessibility, errors, responsiveness etc.
 
