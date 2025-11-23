@@ -136,7 +136,8 @@ I also tested the application across multiple aspect ratios via the developer to
 - Issue with missing favicon. After further research it seems that it is just a general issue with a tab icon not being provided. I included a "W" image from [https://www.flaticon.com/](https://www.flaticon.com/) and the warning disappeared.
 - I have many warnings for missing code return types, unsupported features, etc. After researching I found that these are a combination of issues with Firefox supported-features and depricated features stemming from the inclusion of the Youtube video in my Projects section [https://stackoverflow.com/questions/61624146/feature-policy-skipping-unsupported-feature-name-picture-in-picture-autopl](https://stackoverflow.com/questions/61624146/feature-policy-skipping-unsupported-feature-name-picture-in-picture-autopl). Generally, from what I could find, it seems that this stems from "max complexity" features from Youtube and errors from te inclusion of their minified scripts. My understanding is that these warnings depend on the specific browser, but generally the definition as supplied and included by Youtube (I was provided the `iframe` contents directly from Youtube for my video) should not be changed; these warnings can be ignored.
 - "Try it out" link in the Sorting-Algorithm, Projects page looked better as a button.
-- Expanded
+
+## Summary and Reflections
 
 ## References
 
