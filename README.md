@@ -123,7 +123,7 @@ When the user submits a contact request, I also wanted to ensure that the user r
 
 A footer with basic disclaimer "Website by Tayte Waterman | 2025" is provided at the bottom including links to common external profiles like GitHub and LinkedIn. As with the navigation bar, I used the Bootstrap [footer templates](https://getbootstrap.com/docs/5.3/examples/footers/) as a basis for my footer code and structuring.
 
-The footer is always applied to the bottom of the page, requiring some adjustment of the `body` element. By default the `footer` applies at the end of the `body` element, which for pages with limited content (example, the collapsed contents of the Experience page) can cause the `footer` to be applied in the middle of the screen. To "force" the `footer` to the bottom, the view-height in `body` had to be set to a minimum view-height of 100%.
+The footer is always applied to the bottom of the page, requiring some adjustment of the `body` element. By default the `footer` applies at the end of the `body` element, which for pages with limited content (example, the collapsed contents of the Experience page) can cause the `footer` to be applied in the middle of the screen. To "force" the `footer` to the bottom, the view-height in `body` had to be set to a minimum view-height of 100% and `main` required the `flex-fill` option to force it to expand to fill the remaining space.
 
 ![footer example](images/readme/footer_sample.jpg)
 
