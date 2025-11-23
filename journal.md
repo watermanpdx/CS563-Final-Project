@@ -1,8 +1,15 @@
-# Journal
+# Journal - CS563 Final Project, Tayte Waterman
 
-## About
+**Author:** Tayte Waterman  
+**Course:** CS56, Intro to Web Development  
+**Org:** Portland State University  
+**Project:** Final Project, Personal Webpage  
+**Date:** Nov 23, 2025
 
-The following document is a journal documenting the creation of the personal website for the CS563 project. Within is contained documentation of major updates as well as design decisions and challenges faced in the development of the website.
+## Project Location
+
+Deployed site: [https://watermanpdx.github.io/CS563-Final-Project/](https://watermanpdx.github.io/CS563-Final-Project/)  
+Source repository: [https://github.com/watermanpdx/CS563-Final-Project](https://github.com/watermanpdx/CS563-Final-Project)
 
 ## Journal Entries
 
