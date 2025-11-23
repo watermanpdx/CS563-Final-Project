@@ -139,6 +139,44 @@ I also tested the application across multiple aspect ratios via the developer to
 
 ## Summary and Reflections
 
+Overall I found this project very helpful in learning and applying the skills and technologies of this course. I have had some previous, personal experience (attempts...) at learning and using `html`, `css`, and `Javascript` before, but this course and project helped highlight some areas I was not aware of, as well as demonstrate and enforce better practices.
+
+### Bootstrap
+
+The most beneficial topic for me personally was the use and application of the `Bootstrap` framework. I was not previously aware of this framework and had never used it before. It made design and implementation MUCH much easier than "vanilla" `html`, `css`, and `Javascript`. The ability to use pre-made classes with features already embedded for responsiveness made managing content layout very easy and intuitive. I also appreciated how many "components" were available in the framework like `cards` and `accordions` all with similar themes. This made it quick to bring up features and have them already looking very modern "out of the box."
+
+I also (as perhaps can be seen in my implementation) really liked the `card` compononent in how it provided a logical way to manage content, apply supplementary data like titles and footers, but also that you could use it recursively; `cards` within `cards`. It not only made content a bit easier to manage, but helped with the presentation. Personally, I also like how it makes content visually a bit more interesting too; its not just a list of paragraphs as was common on the early web, but feels more graphically organized and appealing.
+
+### Design Process
+
+At the begining of the project, I chose to populate all of my content, roughly, in a huge `html` document without any `css`, `Javascript`, or `Bootstrap` content. My thought process was to just "flesh out" the content first, and consider the design second. On reflection I think this was a good approach but with some pitfalls. It really helped to have all of the content generally defined up-front so that for the rest of the project I could focus more on the styling and how I wanted to present it.
+
+One thing I would be more cautious about in the future, was the premature assignment of classes and ids. When I created the initial document I already began tagging items with specific ids and classes. My thought was that if they were there, I wouldn't have to touch the `html` too much and just focus on the `css` and `Javascript`. However, since I used `Bootstrap` as a framework, I ended up having to modify my `html` heavily as I went along. Further, it turned out that my `css` code rarely lined up with the initial tags I defined, or even if they did, not in the right spot in the `html` document. This ended up requiring me to remove or move many redundant tags.
+
+In future projects I will likely still follow this approach of creating my rought contents up-front, but would avoid any tag assignment beyond immediated needs (`types`, basic dependencies, etc). I think it would be easier to maintain applying these specific tags only as-needed, along the styling implementation.
+
+### Scalability
+
+As mentioned in some of the journal entries, I had many repeated patterns in my implementation. I chose to control this via `Javascript` to better enforce consistency. That is, I would declare an `array` of `json` objects describing the content and then have `Javascript` code that iterated over it and inserted it into the main `html` document. This helped a lot with consistency and helped avoid needing to make many changes, in many different places, when I chose to adjust the design.
+
+That said, my implementation could still be cleaned up quite a bit. There was a lot of overlap in patterns between sections in Experience. In example, the Education and Work Experience cards were very similar. Also, I chose not to programatically control the contents of Projects, but on reflection these sections are also very similar. I ended up having many sub-sections of very similar `Javascript` code that could likely be combined to reduce my overall code, and simplify management of contents.
+
+Were I to revise this further I would try and combine this into one central script with configuration variants that could manage small differences between objects; layout for Work-Experience vs Education as an example. I also would prefer to strip out the `html` document injection `Javascript` code from the configuration and content details. The `json` descriptions for the contents I would rather have implemented in an external `config` file, and/or had the `Javascript` scan over the file contents (in example the contens of `./images/gallery/`) to identify and load what to apply. This could help separate the contents from the styling. It would allow me to add or remove entries in a manner separate from the webpage styling itself.
+
+I briefly looked into this but could not find a good way to do this without the use of modules or frameworks not covered in this course. I therefore chose to leave this out of scope. However, it is something I would consider in future projects.
+
+### Staying Oriented
+
+The biggest challenge I ran into was keeping my general "orientation" of where I was and how I was structuring contents within my page. As previously described, I heavily relied on the `card` component, and applied `cards` within other `cards`. This gave me the desired look I wanted, but I often found myself applying things like `margin` and other properties in the wrong locations; often leading to undesired "stacking" of computed properties. I often found myself getting lost in where content should be applied and how it was combining. In addressing this, I often found myself accidentally applying redundant structures or missing basic structures (`cols` without `rows`, etc).
+
+I think this is something that likely just comes with practice. However, I found it was something I regularly encountered and needed to keep pausing to make sure I was being mindful of "where" I was in the document regulary. I will say that having tried and manage contents in previous personal projects without frameworks like `Bootstrap` this was much more difficult. Such frameworks really help in unburdening the developer from getting lost in details, but it doesn't completely remove them.
+
+### Accessibility
+
+Accessibility considerations were completely new to me. I have to admit, in previous projects I haven't considered this, or running audits through software like WAVE or Lighthouse. I think this is really important, and was glad to learn and apply it. I also found that using tools like Lighthouse were also helpful in highlighting other practices and issues in my code. The audit-phase checking for this content really helped in adding the final "touches" to my site, and felt like a very valuable skill to apply moving forward.
+
+I was able to successfully remove all errors flagged by WAVE, and achieve a 100/100/100 (Accessibility / Best-Practices / SEO) score via Lighthouse audit.
+
 ## References
 
 ### Included Images
