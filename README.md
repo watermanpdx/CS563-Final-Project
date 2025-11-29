@@ -155,3 +155,12 @@ History of the development of this website, including major changes and design d
 - Oregon State Board of Examiners for Engineering & Land Surveying (OSBEELS), “OSBEELS,” [Online]. Available: [https://www.oregon.gov/osbeels/](https://www.oregon.gov/osbeels/). Accessed: Nov. 22, 2025.
 - Portland State University, “Portland State University,” [Online]. Available: [https://www.pdx.edu/](https://www.pdx.edu/). Accessed: Nov. 22, 2025.
 - “iPhone‑Wallpaper 8Ogfqvw15Rg,” Unsplash, [Online]. Available: [https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg](https://unsplash.com/photos/iphone-wallpaper-8Ogfqvw15Rg). Accessed: Nov. 9, 2025.
+
+### Frameworks and Troubleshooting
+
+- Bootstrap, “Bootstrap Documentation (Navbar, Footers, Flex Utilities, Modal, Forms, Toasts, Accordion, Collapse),” [Online]. Available: [https://getbootstrap.com/](https://getbootstrap.com/). Accessed: Nov. 22, 2025.
+- MDN Web Docs, “Element.insertAdjacentHTML() — Web APIs,” [Online]. Available: [https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML). Accessed: Nov. 22, 2025.
+- MDN Web Docs, “required attribute,” [Online]. Available: [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required). Accessed: Nov. 22, 2025.
+- W3Schools, “HTML a target Attribute,” [Online]. Available: [https://www.w3schools.com/tags/att_a_target.asp](https://www.w3schools.com/tags/att_a_target.asp). Accessed: Nov. 22, 2025.
+- StackOverflow, “Why does Bootstrap 5’s getOrCreateInstance method for collapsibles immediately initialize?,” [Online]. Available: [https://stackoverflow.com/questions/75949166/why-does-bootstrap-5s-getorcreateinstance-method-for-collapsibles-immediately](https://stackoverflow.com/questions/75949166/why-does-bootstrap-5s-getorcreateinstance-method-for-collapsibles-immediately). Accessed: Nov. 22, 2025.
+- StackOverflow, “Feature-policy: Skipping unsupported feature name picture-in-picture autoplay…,” [Online]. Available: [https://stackoverflow.com/questions/61624146/feature-policy-skipping-unsupported-feature-name-picture-in-picture-autopl](https://stackoverflow.com/questions/61624146/feature-policy-skipping-unsupported-feature-name-picture-in-picture-autopl). Accessed: Nov. 22, 2025.
